@@ -1,31 +1,118 @@
 {
-	"bootstrapped": true,
-	"in_process_packages":
+	"auto_upgrade": true,
+	"auto_upgrade_frequency": 1,
+	"auto_upgrade_ignore":
 	[
 	],
-	"installed_packages":
+	"bootstrapped": true,
+	"cache_length": 300,
+	"channels":
 	[
-		"Ansible",
-		"BracketHighlighter",
-		"GenerateUUID",
-		"GitGutter",
-		"HL7",
-		"LiveReload",
-		"LogView",
-		"Markdown Preview",
-		"MarkdownEditing",
-		"Open Folder",
-		"Package Control",
-		"SublimeLinter",
-		"SublimeLinter-annotations",
-		"SublimeLinter-contrib-proselint",
-		"SublimeLinter-json",
-		"SublimeLinter-pep8",
-		"SublimeLinter-pylint",
-		"SublimeLinter-rubocop",
-		"SublimeLinter-shellcheck",
-		"SublimeLinter-xmllint",
-		"SyncedSideBar",
-		"Theme - Afterglow"
-	]
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"debug": false,
+	"dirs_to_ignore":
+	[
+		".hg",
+		".git",
+		".svn",
+		"_darcs",
+		"CVS"
+	],
+	"downloader_precedence":
+	{
+		"linux":
+		[
+			"urllib",
+			"curl",
+			"wget"
+		],
+		"osx":
+		[
+			"urllib"
+		],
+		"windows":
+		[
+			"wininet"
+		]
+	},
+	"enable_tests": false,
+	"files_to_ignore":
+	[
+		"*.pyc",
+		".hgignore",
+		".gitignore",
+		".bzrignore",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache"
+	],
+	"files_to_include":
+	[
+	],
+	"git_binary":
+	[
+	],
+	"git_update_command":
+	[
+		"pull",
+		"--ff",
+		"--commit"
+	],
+	"hg_binary":
+	[
+	],
+	"hg_update_command":
+	[
+		"pull",
+		"--update"
+	],
+	"http_cache": true,
+	"http_cache_length": 604800,
+	"http_proxy": "",
+	"https_proxy": "",
+	"ignore_vcs_packages":
+	[
+	],
+	"install_missing": true,
+	"install_prereleases":
+	[
+	],
+	"package_destination": "",
+	"package_name_map":
+	{
+	},
+	"package_profiles":
+	{
+		"Binaries Only":
+		{
+			"files_to_ignore":
+			[
+				"*.py",
+				".hgignore",
+				".gitignore",
+				".bzrignore",
+				"*.sublime-project",
+				"*.sublime-workspace",
+				"*.tmTheme.cache"
+			],
+			"files_to_include":
+			[
+				"__init__.py"
+			]
+		}
+	},
+	"proxy_password": "",
+	"proxy_username": "",
+	"remove_orphaned": true,
+	"repositories":
+	[
+	],
+	"submit_url": "https://packagecontrol.io/submit",
+	"submit_usage": true,
+	"timeout": 30,
+	"unmanaged_packages_ignore":
+	[
+	],
+	"user_agent": "Package Control v%s"
 }

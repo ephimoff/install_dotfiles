@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 # Start
-echo "$(basename "$0") starting."
+# echo "$(basename "$0") starting."
 
 # github
-git clone https://github.com/craighurley/ansible-roles.git ~/Projects/ansible-roles
-git clone https://github.com/craighurley/craighurley.github.io.git ~/Projects/craighurley.me
-git clone https://github.com/craighurley/personal-vps.git ~/Projects/personal-vps
-git clone https://github.com/craighurley/thehurley.com.git ~/Projects/thehurley.com
-git clone https://github.com/craighurley/vagrant-cloud-init.git ~/Projects/vagrant-cloud-init
-git clone https://github.com/craighurley/weechat.git ~/.weechat
+# git clone https://github.com/craighurley/ansible-roles.git ~/Projects/ansible-roles
+# git clone https://github.com/craighurley/craighurley.github.io.git ~/Projects/craighurley.me
+# git clone https://github.com/craighurley/personal-vps.git ~/Projects/personal-vps
+# git clone https://github.com/craighurley/thehurley.com.git ~/Projects/thehurley.com
+# git clone https://github.com/craighurley/vagrant-cloud-init.git ~/Projects/vagrant-cloud-init
+# git clone https://github.com/craighurley/weechat.git ~/.weechat
 
 # gitlab
-git clone git@gitlab.com:craighurley/notes.git  ~/Projects/notes
-git clone git@gitlab.com:craighurley/scripts.git ~/Projects/scripts
+# git clone git@gitlab.com:craighurley/notes.git  ~/Projects/notes
+# git clone git@gitlab.com:craighurley/scripts.git ~/Projects/scripts
 
 # Finished
-echo "$(basename "$0") complete."
+# echo "$(basename "$0") complete."
