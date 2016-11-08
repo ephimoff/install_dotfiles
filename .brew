@@ -14,25 +14,25 @@ brew upgrade
 
 # install applications
 brew install ack
-brew install ant
-brew install ant-contrib
-brew install ansible
+# brew install ant
+# brew install ant-contrib
+# brew install ansible
 brew install aspell --with-lang-en
 brew install bash
 brew install bash-completion
 brew install git
-brew install ipcalc
-brew install iproute2mac
-brew install jq
-brew install netcat
-brew install nmap
-brew install openssl
-brew install parallel
-brew install pstree
-brew install pyenv
-brew install rbenv
-brew install rbenv-bundler
-brew install rename
+# brew install ipcalc
+# brew install iproute2mac
+# brew install jq
+# brew install netcat
+# brew install nmap
+# brew install openssl
+# brew install parallel
+# brew install pstree
+# brew install pyenv
+# brew install rbenv
+# brew install rbenv-bundler
+# brew install rename
 brew install rpm
 brew install ruby-build
 brew install shellcheck
