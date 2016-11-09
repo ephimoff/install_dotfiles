@@ -6,7 +6,7 @@ echo "$(basename "$0") starting."
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
@@ -38,6 +38,9 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
 ###############################################################################
 # Trackpad, keyboard
 ###############################################################################
@@ -60,13 +63,16 @@ defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
 # Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
+# KeyboardL Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 ###############################################################################
 # Screen
 ###############################################################################
 
-# Require password 5 seconds after sleep or screen saver begins
+# Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 5
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the Pictures directory
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
@@ -147,9 +153,36 @@ defaults write com.apple.dock autohide-time-modifier -int 0
 # Minimise applications to their icon
 defaults write com.apple.dock "minimize-to-application" -bool true
 
-# Hot corners: bottom right screen corner = start screen saver
-# defaults write com.apple.dock wvous-br-corner -int 5
-# defaults write com.apple.dock wvous-br-modifier -int 0
+# Hot corners:
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# Top right screen corner → Put display to sleep
+defaults write com.apple.dock wvous-tr-corner -int 5
+defaults write com.apple.dock wvous-tr-modifier -int 0
+
+
+###############################################################################
+# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+###############################################################################
+
+# Week should start on Monday
+defaults write com.apple.ical "first day of the week" 1
+
+###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
 # Energy preferences
@@ -182,4 +215,4 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 #sudo tmutil disablelocal
 
 # Finished
-echo "$(basename "$0") complete."
+echo "$(basename "$0") complete. Note that some of these changes require a logout/restart to take effect."
