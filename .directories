@@ -4,9 +4,9 @@
 echo "$(basename "$0") starting."
 
 # create folders
-[[ ! -d ~/Downloads/.transmission/incomplete ]] && mkdir -p ~/Downloads/.transmission/incomplete
-[[ ! -d ~/Projects/eclipse_workspace ]] && mkdir -p ~/Projects/eclipse_workspace
-[[ ! -d ~/tmp ]] && mkdir -p ~/tmp
+# [[ ! -d ~/Downloads/.transmission/incomplete ]] && mkdir -p ~/Downloads/.transmission/incomplete
+# [[ ! -d ~/Projects/eclipse_workspace ]] && mkdir -p ~/Projects/eclipse_workspace
+# [[ ! -d ~/tmp ]] && mkdir -p ~/tmp
 
 # ssh
 [[ ! -d ~/.ssh ]] && mkdir -p ~/.ssh

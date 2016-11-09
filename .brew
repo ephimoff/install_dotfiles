@@ -13,26 +13,9 @@ brew update
 brew upgrade
 
 # install applications
-brew install ack
-# brew install ant
-# brew install ant-contrib
-# brew install ansible
-brew install aspell --with-lang-en
+# ... only for work
 brew install bash
 brew install bash-completion
-brew install git
-# brew install ipcalc
-# brew install iproute2mac
-# brew install jq
-# brew install netcat
-# brew install nmap
-# brew install openssl
-# brew install parallel
-# brew install pstree
-# brew install pyenv
-# brew install rbenv
-# brew install rbenv-bundler
-# brew install rename
 brew install rpm
 brew install ruby-build
 brew install shellcheck
@@ -45,12 +28,10 @@ brew install vim --with-custom-python
 brew install watch
 brew install weechat --with-python --with-perl --with-aspell
 brew install wget
-
 # gnu
 brew install coreutils
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
-
 # install additional completion files
 brew tap homebrew/completions
 brew install bundler-completion
@@ -59,6 +40,27 @@ brew install gem-completion
 brew install pip-completion
 brew install ruby-completion
 brew install vagrant-completion
+# brew install ant
+# brew install ant-contrib
+# brew install ansible
+# brew install aspell --with-lang-en
+# brew install ipcalc
+# brew install iproute2mac
+# brew install jq
+# brew install netcat
+# brew install nmap
+# brew install openssl
+# brew install parallel
+# brew install pstree
+# brew install pyenv
+# brew install rbenv
+# brew install rbenv-bundler
+# brew install rename
+
+# ... for personal use as well
+brew install git
+
+# brew install ack
 
 # cleanup unneeded files
 brew cleanup
