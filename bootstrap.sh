@@ -8,6 +8,7 @@ $directory/.dotfiles
 $directory/.macos
 $directory/.brew
 $directory/.cask
+$directory/.mas
 $directory/.preferences
 
 # Finished

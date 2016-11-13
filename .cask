@@ -28,13 +28,13 @@ brew cask install --require-sha iterm2
 brew cask install --require-sha java
 brew cask install --require-sha skype
 brew cask install --require-sha sublime-text
-brew cask install --require-sha the-unarchiver
+# brew cask install --require-sha the-unarchiver
 brew cask install --require-sha dropbox
 brew cask install --require-sha vlc
 brew cask install --require-sha cyberduck
-brew cask install --require-sha flycut
+# brew cask install --require-sha flycut
 brew cask install --require-sha spotify
-brew cask install --require-sha 1password
+# brew cask install --require-sha 1password
 
 
 

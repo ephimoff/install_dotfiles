@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Start
+echo "$(basename "$0") starting."
+
+# Ask for the administrator password upfront
+sudo -v
+
+# install mas first
+brew install mas
+
+# install applications
+
+APPS=(
+  425424353 # The Unarchiver
+  443987910 # 1Password
+  512617038 # Snappy - Snapshots, the smart way.
+  823766827 # OneDrive
+  408981434 # iMovie
+  409201541 # Pages
+  784801555 # OneNote
+  442160987 # FlyCut
+)
+mas install ${APPS[@]}
+
+# cleanup unneeded files
+brew cleanup
+
+# Finished
+echo "$(basename "$0") complete."
