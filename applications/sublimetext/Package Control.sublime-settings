@@ -5,9 +5,7 @@
 	],
 	"installed_packages":
 	[
-		"Ansible",
 		"BracketHighlighter",
-		"DashDoc",
 		"GenerateUUID",
 		"GitGutter",
 		"HL7",
@@ -19,11 +17,7 @@
 		"Package Control",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
-		"SublimeLinter-contrib-proselint",
 		"SublimeLinter-json",
-		"SublimeLinter-pep8",
-		"SublimeLinter-pylint",
-		"SublimeLinter-rubocop",
 		"SublimeLinter-shellcheck",
 		"SublimeLinter-xmllint",
 		"SyncedSideBar",
