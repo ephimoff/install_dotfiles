@@ -87,12 +87,4 @@ alias dt="cd ~/Desktop"
 alias pro="cd ~/Projects"
 alias g="git"
 
-# Git shortcuts
-alias gd="git diff | vim"
-alias ga="git add"
-alias ga.="git add ."
-# alias gi="git ignore"
-alias gst="git status"
-alias gp="git push"
-alias gb="git branch"
-alias gpom="git pull origin master"
+alias ga='git add '
