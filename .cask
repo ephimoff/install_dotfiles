@@ -28,13 +28,11 @@ brew cask install --require-sha iterm2
 brew cask install --require-sha java
 brew cask install --require-sha skype
 brew cask install --require-sha sublime-text
-# brew cask install --require-sha the-unarchiver
 brew cask install --require-sha dropbox
 brew cask install --require-sha vlc
 brew cask install --require-sha cyberduck
-# brew cask install --require-sha flycut
+brew cask install --require-sha flycut
 brew cask install --require-sha spotify
-# brew cask install --require-sha 1password
 
 
 
@@ -50,12 +48,12 @@ if [[ $isWorkMachine == true ]] ; then
     brew cask install --require-sha hipchat
     brew cask install --require-sha joinme
     brew cask install --require-sha dash
-    brew cask install --require-sha virtualbox
+    # brew cask install --require-sha virtualbox
     brew cask install --require-sha vagrant
-    brew cask install --require-sha virtualbox-extension-pack
+    # brew cask install --require-sha virtualbox-extension-pack
     brew cask install --require-sha kaleidoscope
-    brew cask install --require-sha eclipse-jee
-    brew cask install --require-sha docker
+    # brew cask install --require-sha eclipse-jee
+    # brew cask install --require-sha docker
     brew cask install --require-sha sourcetree
 fi
 

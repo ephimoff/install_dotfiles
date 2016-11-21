@@ -15,7 +15,6 @@ brew upgrade
 # install applications
 brew install bash
 brew install bash-completion
-brew install fish #fish is a fully-equipped command line shell (like bash or zsh) that is smart and user-friendly. http://fishshell.com
 brew install vim --with-custom-python
 brew tap homebrew/completions
 brew install vagrant-completion

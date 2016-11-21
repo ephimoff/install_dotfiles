@@ -19,7 +19,6 @@ APPS=(
   408981434 # iMovie
   409201541 # Pages
   784801555 # OneNote
-  442160987 # FlyCut
 )
 mas install ${APPS[@]}
 

@@ -4,7 +4,7 @@ directory=~/Projects/dotfiles
 
 $directory/.directories
 $directory/.dotfiles
-# $directory/.templates
+$directory/.templates
 $directory/.macos
 $directory/.brew
 $directory/.cask
