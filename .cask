@@ -22,7 +22,7 @@ brew tap caskroom/fonts
 brew tap caskroom/cask
 
 # install applications
-brew cask install --require-sha bettertouchtool
+# brew cask install --require-sha bettertouchtool
 brew cask install --require-sha firefox
 brew cask install --require-sha iterm2
 brew cask install --require-sha java
@@ -33,6 +33,9 @@ brew cask install --require-sha vlc
 brew cask install --require-sha cyberduck
 brew cask install --require-sha flycut
 brew cask install --require-sha spotify
+brew cask install --require-sha caffeine
+brew cask install --require-sha spectacle
+brew cask install --require-sha transmission
 
 
 

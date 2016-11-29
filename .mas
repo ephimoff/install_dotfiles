@@ -20,7 +20,7 @@ APPS=(
   409201541 # Pages
   784801555 # OneNote
 )
-mas install ${APPS[@]}
+mas install "${APPS[@]}"
 
 # cleanup unneeded files
 brew cleanup
