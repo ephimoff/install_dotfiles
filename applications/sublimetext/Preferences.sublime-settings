@@ -5,7 +5,10 @@
 		"backends",
 		"Codeset",
 		"Codesets",
-		"namespace"
+		"namespace",
+		"Dockerfile",
+		"Centos",
+		"apps"
 	],
 	"always_show_minimap_viewport": true,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",

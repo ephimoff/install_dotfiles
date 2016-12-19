@@ -51,12 +51,12 @@ if [[ $isWorkMachine == true ]] ; then
     brew cask install --require-sha hipchat
     brew cask install --require-sha joinme
     brew cask install --require-sha dash
-    # brew cask install --require-sha virtualbox
+    brew cask install --require-sha virtualbox
     brew cask install --require-sha vagrant
-    # brew cask install --require-sha virtualbox-extension-pack
+    brew cask install --require-sha virtualbox-extension-pack
     brew cask install --require-sha kaleidoscope
     # brew cask install --require-sha eclipse-jee
-    # brew cask install --require-sha docker
+    brew cask install --require-sha docker
     brew cask install --require-sha sourcetree
 fi
 

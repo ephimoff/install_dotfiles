@@ -47,3 +47,5 @@ fi
 if [[ -f $(which aws_completer) ]] ; then
     complete -C $(which aws_completer) aws
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

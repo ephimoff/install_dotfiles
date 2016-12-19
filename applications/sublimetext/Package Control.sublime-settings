@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"Dockerfile Syntax Highlighting",
 		"GenerateUUID",
 		"GitGutter",
 		"HL7",
