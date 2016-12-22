@@ -28,6 +28,7 @@ brew cask install --require-sha iterm2
 brew cask install --require-sha java
 brew cask install --require-sha skype
 brew cask install --require-sha sublime-text
+brew cask install --require-sha visual-studio-code
 brew cask install --require-sha dropbox
 brew cask install --require-sha vlc
 brew cask install --require-sha cyberduck
@@ -54,10 +55,11 @@ if [[ $isWorkMachine == true ]] ; then
     brew cask install --require-sha virtualbox
     brew cask install --require-sha vagrant
     brew cask install --require-sha virtualbox-extension-pack
-    brew cask install --require-sha kaleidoscope
+    # brew cask install --require-sha kaleidoscope
     # brew cask install --require-sha eclipse-jee
     brew cask install --require-sha docker
     brew cask install --require-sha sourcetree
+    brew cask install --require-sha soapui
 fi
 
 # install fonts
