@@ -14,11 +14,10 @@ brew install mas
 APPS=(
   425424353 # The Unarchiver
   443987910 # 1Password
-  512617038 # Snappy - Snapshots, the smart way.
   823766827 # OneDrive
   408981434 # iMovie
   409201541 # Pages
-  784801555 # OneNote
+  775737590 # iA Writer
 )
 mas install "${APPS[@]}"
 

@@ -1,5 +1,5 @@
 # custom scripts
-[[ -d "$HOME/.scripts" ]] && PATH="$PATH:$HOME/.scripts"
+[[ -d "$HOME/Projects/scripts" ]] && PATH="$PATH:$HOME/Projects/scripts"
 
 # rgrav
 [[ -d "$HOME/Projects/orion-utilities/rgrav" ]] && PATH="$PATH:$HOME/Projects/orion-utilities/rgrav"

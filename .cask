@@ -21,50 +21,95 @@ sudo -v
 brew tap caskroom/fonts
 brew tap caskroom/cask
 
+
+# Install Caskroom
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+
+# Install packages
+apps=(
+    1password
+    caffeine
+    cyberduck
+    dash
+    docker
+    dropbox
+    firefox
+    flycut
+    font-fira-code
+    font-source-code-pro
+    font-source-code-pro-for-powerline
+    google-chrome
+    google-drive
+    hipchat
+    imageoptim
+    iterm2
+    java
+    joinme
+    skype
+    soapui
+    sourcetree
+    spectacle
+    spotify
+    sublime-text
+    transmission
+    virtualbox
+    virtualbox-extension-pack
+    visual-studio-code
+    vlc
+)
+
+brew cask install  --require-sha "${apps[@]}"
+
+
+
+
 # install applications
 # brew cask install --require-sha bettertouchtool
-brew cask install --require-sha firefox
-brew cask install --require-sha iterm2
-brew cask install --require-sha java
-brew cask install --require-sha skype
-brew cask install --require-sha sublime-text
-brew cask install --require-sha visual-studio-code
-brew cask install --require-sha dropbox
-brew cask install --require-sha vlc
-brew cask install --require-sha cyberduck
-brew cask install --require-sha flycut
-brew cask install --require-sha spotify
-brew cask install --require-sha caffeine
-brew cask install --require-sha spectacle
-brew cask install --require-sha transmission
+# brew cask install --require-sha firefox
+# brew cask install --require-sha iterm2
+# brew cask install --require-sha java
+# brew cask install --require-sha skype
+# brew cask install --require-sha sublime-text
+# brew cask install --require-sha visual-studio-code
+# brew cask install --require-sha dropbox
+# brew cask install --require-sha vlc
+# brew cask install --require-sha cyberduck
+# brew cask install --require-sha flycut
+# brew cask install --require-sha spotify
+# brew cask install --require-sha caffeine
+# brew cask install --require-sha spectacle
+# brew cask install --require-sha transmission
 
 
 
 
 # if this is not a work machine
-if [[ $isWorkMachine == false ]] ; then
-    # brew cask install --require-sha adobe-photoshop-lightroom
-fi
+# if [[ $isWorkMachine == false ]] ; then
+#     # brew cask install --require-sha adobe-photoshop-lightroom
+# fi
 
 # if this is a work machine
-if [[ $isWorkMachine == true ]] ; then
-    # brew cask install --require-sha charles
-    brew cask install --require-sha hipchat
-    brew cask install --require-sha joinme
-    brew cask install --require-sha dash
-    brew cask install --require-sha virtualbox
-    brew cask install --require-sha vagrant
-    brew cask install --require-sha virtualbox-extension-pack
-    # brew cask install --require-sha kaleidoscope
-    # brew cask install --require-sha eclipse-jee
-    brew cask install --require-sha docker
-    brew cask install --require-sha sourcetree
-    brew cask install --require-sha soapui
-fi
+# if [[ $isWorkMachine == true ]] ; then
+#     # brew cask install --require-sha charles
+#     brew cask install --require-sha hipchat
+#     brew cask install --require-sha joinme
+#     brew cask install --require-sha dash
+#     brew cask install --require-sha virtualbox
+#     brew cask install --require-sha vagrant
+#     brew cask install --require-sha virtualbox-extension-pack
+#     # brew cask install --require-sha kaleidoscope
+#     # brew cask install --require-sha eclipse-jee
+#     brew cask install --require-sha docker
+#     brew cask install --require-sha sourcetree
+#     brew cask install --require-sha soapui
+# fi
 
 # install fonts
-brew cask install --require-sha font-source-code-pro
-brew cask install --require-sha font-source-code-pro-for-powerline
+# brew cask install --require-sha font-source-code-pro
+# brew cask install --require-sha font-source-code-pro-for-powerline
+# brew cask install --require-sha font-fira-code
 
 # cleanup unneeded files
 brew cleanup

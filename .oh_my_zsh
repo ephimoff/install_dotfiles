@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Start
+echo "$(basename "$0") starting."
+
+echo "Installing oh-my-zsh (http://ohmyz.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Making zsh default shell"
+chsh -s /bin/zsh
+
+# Finished
+echo "$(basename "$0") complete."

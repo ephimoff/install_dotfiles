@@ -7,6 +7,7 @@
 	[
 		"BracketHighlighter",
 		"Dockerfile Syntax Highlighting",
+		"Fix Mac Path",
 		"GenerateUUID",
 		"GitGutter",
 		"HL7",
@@ -21,6 +22,8 @@
 		"SublimeLinter-annotations",
 		"SublimeLinter-contrib-mdl",
 		"SublimeLinter-json",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
 		"SublimeLinter-shellcheck",
 		"SublimeLinter-xmllint",
 		"SyncedSideBar",

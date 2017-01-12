@@ -20,13 +20,6 @@ Host github.com
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_rsa
 
-Host gitlab.com
-    HostName altssh.gitlab.com
-    Port 443
-    User git
-    PasswordAuthentication no
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/id_rsa
 
 Host 192.168.*.* *.local localhost
     UserKnownHostsFile /dev/null

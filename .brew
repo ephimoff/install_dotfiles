@@ -21,6 +21,7 @@ brew install vagrant-completion
 brew install docker-compose-completion
 brew install jq #jq is a lightweight and flexible command-line JSON processor
 brew install git
+brew install zsh
 
 
 # cleanup unneeded files
