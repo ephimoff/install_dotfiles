@@ -60,6 +60,9 @@ A collection of scripts to bootstrap a clean install of OS X.
 
     # Apply preferences to applications.
     ~/Projects/dotfiles/.preferences
+
+    # Install oh_my_zsh.
+    ~/Projects/dotfiles/.oh_my_zsh
     ```
 
 1. Restart your computer.
@@ -75,8 +78,14 @@ git pull origin master
 
 ## Feedback
 
-Suggestions/improvements [welcome](https://github.com/craighurley/dotfiles/issues)!
+Suggestions/improvements [welcome](https://github.com/ephimoff/dotfiles/issues)!
 
 ## Acknowedgements
 
 * [Mathias Bynens](https://github.com/mathiasbynens)
+* [Craig Hurly](https://github.com/craighurley/dotfiles)
+* [atomatic](https://github.com/atomantic/dotfiles)
+
+## Warning / Liability
+
+> Warning: The creator of this repo is not responsible if your machine ends up in a state you are not happy with. If you are concerned, look at the code to review everything this will do to your machine :)
