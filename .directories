@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Start
-echo "$(basename "$0") starting."
+bot "Starting $(basename "$0")"
 
 # create folders
 # [[ ! -d ~/Downloads/.transmission/incomplete ]] && mkdir -p ~/Downloads/.transmission/incomplete
@@ -16,4 +16,4 @@ chmod 700 ~/.ssh
 ln -s ~/Projects/scripts ~/.scripts
 
 # Finished
-echo "$(basename "$0") complete."
+bot "$(basename "$0") complete."

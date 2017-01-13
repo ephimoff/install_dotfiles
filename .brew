@@ -1,31 +1,39 @@
 #!/usr/bin/env bash
 
+source ./bin/echos.sh
 # Start
-echo "$(basename "$0") starting."
+bot "Starting $(basename "$0"). Note: it may take a while"
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Make sure we’re using the latest Homebrew
+running "Updating brew..."
 brew update
+ok
 
 # Upgrade any already-installed formulae
+running "Upgrading formulae..."
 brew upgrade
+ok
 
 # install applications
+running "Installing applications..."
+brew tap homebrew/completions
+
 brew install bash
 brew install bash-completion
-brew install vim --with-custom-python
-brew tap homebrew/completions
-brew install vagrant-completion
 brew install docker-compose-completion
-brew install jq #jq is a lightweight and flexible command-line JSON processor
 brew install git
+brew install jq #jq is a lightweight and flexible command-line JSON processor
+brew install vagrant-completion
+brew install vim --with-custom-python
 brew install zsh
+ok
 
-
-# cleanup unneeded files
+running "Cleaning up unneeded files..."
 brew cleanup
+ok
 
 # Finished
-echo "$(basename "$0") complete."
+bot "$(basename "$0") complete."

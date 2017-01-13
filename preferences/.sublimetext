@@ -19,12 +19,13 @@ packageControlTarget=$packagesUser/Package\ Control.sublime-settings
 
 # install package control
 if [[ ! -f "$packageControl" ]] ; then
-    echo "Downloading package control."
+    running "Downloading package control."
     if ! curl -# -f -o "$packageControl" https://packagecontrol.io/Package%20Control.sublime-package
     then
-        echo "Something went wrong downloading package control."
+        error "Something went wrong downloading package control."
         exit 1
     fi
+    ok
 fi
 
 # link config files

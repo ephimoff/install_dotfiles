@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Start
-echo "$(basename "$0") starting."
+bot "Starting $(basename "$0")"
 
 directory=~/Projects/dotfiles/dotfiles
 backup=~/.dotfiles_backup
@@ -15,11 +15,13 @@ function doIt() {
     # shellcheck disable=SC2068
     for file in ${files[@]} ; do
         if [[ -f "$HOME/$(basename "$file")" ]] ; then
-            echo "Moving $HOME/$(basename "$file") to $backup"
+            running "Moving $HOME/$(basename "$file") to $backup"
             mv -n "$HOME/$(basename "$file")" "$backup"/
+            ok
         fi
-        echo "Symlinking $file to $HOME/$(basename "$file")"
+        running "Symlinking $file to $HOME/$(basename "$file")"
         ln -f -s "$file" "$HOME/$(basename "$file")"
+        ok
     done
 }
 
@@ -32,4 +34,4 @@ fi
 unset doIt
 
 # Finished
-echo "$(basename "$0") complete."
+bot "$(basename "$0") complete."

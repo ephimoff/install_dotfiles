@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+# include colorized echo
+source ./bin/echos.sh
 # Start
-echo "$(basename "$0") starting."
+bot "Starting $(basename "$0")"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -9,19 +11,23 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-###############################################################################
+########################################    #######################################
 # General System
 ###############################################################################
-echo "  › Set computer name (as done via System Preferences → Sharing)"
-read -r -p "Enter new hostname: " _hn
+running "Set computer name (as done via System Preferences → Sharing)"
+read -r -p "Please enter new hostname _: " _hn
 
 sudo scutil --set ComputerName "$_hn"
 sudo scutil --set HostName "$_hn"
 sudo scutil --set LocalHostName "$_hn"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$_hn"
+ok
 
-echo "  › Disable the sound effects on boot.  To re-enable: sudo nvram -d SystemAudioVolume"
+running "Disable the sound effects on boot.  To re-enable: sudo nvram -d SystemAudioVolume"
 sudo nvram SystemAudioVolume="%80"
+ok
+
+
 
 # Enable verbose booting.  To reset to default: sudo nvram boot-args="" ; sudo nvram -d boot-args
 #sudo nvram boot-args="-v"
@@ -34,33 +40,41 @@ sudo nvram SystemAudioVolume="%80"
 # Expand save panel by default
 # defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-echo "  › Check for software updates daily, not just once per week"
+running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+ok
 
-echo "  › Remove duplicates in the 'Open With' menu"
+running "Remove duplicates in the 'Open With' menu"
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+ok
 
 ###############################################################################
 # Trackpad, keyboard
 ###############################################################################
 
-echo "  › Trackpad: enable tap to click"
+running "Trackpad: enable tap to click"
 defaults -currentHost write NSGlobalDomain "com.apple.mouse.tapBehavior" -int 1
+ok
 
-echo "  › Trackpad: disable look up"
+running "Trackpad: disable look up"
 defaults -currentHost write NSGlobalDomain "com.apple.trackpad.threeFingerTapGesture" -int 0
+ok
 
-echo "  › Trackpad: enable 3 finger drag"
+running "Trackpad: enable 3 finger drag"
 defaults -currentHost write NSGlobalDomain "com.apple.trackpad.threeFingerDragGesture" -int 1
+ok
 
-echo "  › Trackpad: disable swipe between pages"
+running "Trackpad: disable swipe between pages"
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
+ok
 
-echo "  › Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
+running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+ok
 
-echo "  › Keyboard: Disable auto-correct"
+running "Keyboard: Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+ok
 
 ###############################################################################
 # Screen
@@ -71,78 +85,98 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # defaults write com.apple.screensaver askForPassword -int 1
 # defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-echo "  › Save screenshots to the Pictures directory"
+running "Save screenshots to the Pictures directory"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
+ok
 
-echo "  › Save screenshots in PNG format"
-defaults write com.apple.screencapture type -string "png" # (other options: BMP, GIF, JPG, PDF, TIFF)
+running "Save screenshots in PNG format"
+defaults write com.apple.screencapture type -string "png"
+ok # (other options: BMP, GIF, JPG, PDF, TIFF)
 
-echo "  › Disable shadow in screenshots"
+running "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
+ok
 
 ###############################################################################
 # Finder
 ###############################################################################
 
-echo "  › Icons for hard drives, servers, and removable media on the desktop"
+running "Icons for hard drives, servers, and removable media on the desktop"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+ok
 
-echo "  › Finder: show hidden files by default"
+running "Finder: show hidden files by default"
 defaults write com.apple.finder AppleShowAllFiles -bool true
+ok
 
-echo "  › Finder: keep folders on top when sorting by name"
+running "Finder: keep folders on top when sorting by name"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
+ok
 
-echo "  › Finder: show full path in title"
+running "Finder: show full path in title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+ok
 
-echo "  › Finder: show status bar"
+running "Finder: show status bar"
 defaults write com.apple.finder ShowStatusBar -bool true
+ok
 
-echo "  › Finder: show path bar"
+running "Finder: show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
+ok
 
-echo "  › Finder: when performing a search, search the current folder by default"
+running "Finder: when performing a search, search the current folder by default"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+ok
 
-echo "  › Finder: use list view in all Finder windows by default"
+running "Finder: use list view in all Finder windows by default"
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+ok
 
-echo "  › Finder: show all filename extensions"
+running "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+ok
 
-echo "  › Avoid creating .DS_Store files on network volumes"
+running "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+ok
 
-echo "  › Avoid creating .DS_Store files on USB Volumes"
+running "Avoid creating .DS_Store files on USB Volumes"
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+ok
 
-echo "  › Show the ~/Library folder"
+running "Show the ~/Library folder"
 chflags nohidden "$HOME/Library"
+ok
 
-echo "  › Expand save panel by default"
+running "Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+ok
 
-echo "  › Sets default save target to be a local disk, not iCloud."
+running "Sets default save target to be a local disk, not iCloud."
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+ok
 
-echo "  › Disable the 'Are you sure you want to open this application?' dialog"
+running "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+ok
 
-echo "  › Show battery percent"
+running "Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
+ok
 
 ###############################################################################
 # Dock, Dashboard, and hot corners
 ###############################################################################
 
-echo "  › Dock: minimise and maximise effect set to 'scale'"
+running "Dock: minimise and maximise effect set to 'scale'"
 # Possible settings: genie, scale
 defaults write com.apple.dock mineffect -string "scale"
+ok
 
 # Show indicator lights for open applications in the Dock
 # defaults write com.apple.dock show-process-indicators -bool true
@@ -153,11 +187,13 @@ defaults write com.apple.dock mineffect -string "scale"
 # Speed up Mission Control animations
 # defaults write com.apple.dock expose-animation-duration -float 0.1
 
-echo "  › Don’t show Dashboard as a Space"
+running "Don’t show Dashboard as a Space"
 defaults write com.apple.dock dashboard-in-overlay -bool true
+ok
 
-echo "  › Don’t automatically rearrange Spaces based on most recent use"
+running "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
+ok
 
 # Remove the animation when hiding/showing the Dock
 # defaults write com.apple.dock autohide-time-modifier -int 0
@@ -165,7 +201,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Minimise applications to their icon
 # defaults write com.apple.dock "minimize-to-application" -bool true
 
-echo "  › Top right screen corner → Put display to sleep"
+running "Top right screen corner → Put display to sleep"
 # Hot corners:
 # Possible values:
 #  0: no-op
@@ -180,21 +216,24 @@ echo "  › Top right screen corner → Put display to sleep"
 # 12: Notification Center
 defaults write com.apple.dock wvous-tr-corner -int 5
 defaults write com.apple.dock wvous-tr-modifier -int 0
+ok
 
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
 
-echo "  › Start week on Monday"
+running "Start week on Monday"
 defaults write com.apple.ical "first day of the week" 1
+ok
 
 ###############################################################################
 # Photos                                                                      #
 ###############################################################################
 
-echo "  › Prevent Photos from opening automatically when devices are plugged in"
+running "Prevent Photos from opening automatically when devices are plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+ok
 
 ###############################################################################
 # Energy preferences
@@ -210,14 +249,16 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Firewall
 ###############################################################################
 
-echo "  › Enable the firewall"
+running "Enable the firewall"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+ok
 
 # Do not auto allow signed apps
 # sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
 
-echo "  › Enable stealth mode"
+running "Enable stealth mode"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+ok
 
 ###############################################################################
 # Mail
@@ -227,8 +268,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 # defaults write com.apple.mail DisableReplyAnimations -bool true
 # defaults write com.apple.mail DisableSendAnimations -bool true
 
-echo "  › Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
+running "Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+ok
 
 # Display emails in threaded mode, sorted by date (oldest at the top)
 # defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
@@ -238,11 +280,13 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Default sort order
 # defaults write com.apple.mail InboxViewerAttributes -dict-add "SortedDescending" -string "yes"
 
-echo "  › Mail.app: Disable inline attachments (just show the icons)"
+running "Mail.app: Disable inline attachments (just show the icons)"
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+ok
 
-echo "  › Mail.app: Insert attachments at end of message (stops exchange servers adding ATT00001.htm etc. to your emails)"
+running "Mail.app: Insert attachments at end of message (stops exchange servers adding ATT00001.htm etc. to your emails)"
 defaults write com.apple.mail AttachAtEnd -bool true
+ok
 
 ###############################################################################
 # Safari & WebKit
@@ -253,8 +297,9 @@ defaults write com.apple.mail AttachAtEnd -bool true
 # defaults write com.apple.Safari NewTabBehavior -int 0
 # defaults write com.apple.Safari NewWindowBehavior -int 0
 
-echo "  › Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
+running "Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+ok
 
 # Allow hitting the Backspace key to go to the previous page in history
 # defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
@@ -262,39 +307,35 @@ defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 # Hide Safari’s bookmarks bar by default
 # defaults write com.apple.Safari ShowFavoritesBar -bool false
 
-echo "  › Safari: Disable Safari’s thumbnail cache for History and Top Sites"
+running "Safari: Disable Safari’s thumbnail cache for History and Top Sites"
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+ok
 
-echo "  › Safari: Enable Safari’s debug menu"
+running "Safari: Enable Safari’s debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+ok
 
 # Make Safari’s search banners default to Contains instead of Starts With
 # defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
-echo "  › Safari: Stop Safari sending searches to Apple"
+running "Safari: Stop Safari sending searches to Apple"
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
+ok
 
 ###############################################################################
 # TextEdit
 ###############################################################################
 
-echo "  › TexEdit: Use plain text mode for new TextEdit documents"
+running "TexEdit: Use plain text mode for new TextEdit documents"
 defaults write com.apple.TextEdit RichText -int 0
+ok
 
-echo "  › TexEdit: Open and save files as UTF-8 in TextEdit"
+running "TexEdit: Open and save files as UTF-8 in TextEdit"
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+ok
 
 
-###############################################################################
-# Media
-###############################################################################
-if [ -z "$KEEP_ITUNES" ]; then
-  echo "  › Disable iTunes helper"
-  disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
-  echo "  › Prevent play button from launching iTunes"
-  unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
-fi
 
 # Finished
-echo "$(basename "$0") complete. Note that some of these changes require a logout/restart to take effect."
+bot "$(basename "$0") complete. Note that some of these changes require a logout/restart to take effect."

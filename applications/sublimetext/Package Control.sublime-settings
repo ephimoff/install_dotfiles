@@ -7,6 +7,7 @@
 	[
 		"BracketHighlighter",
 		"Dockerfile Syntax Highlighting",
+		"Dotfiles Syntax Highlighting",
 		"Fix Mac Path",
 		"GenerateUUID",
 		"GitGutter",

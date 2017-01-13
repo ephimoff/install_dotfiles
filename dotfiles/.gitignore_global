@@ -5,8 +5,11 @@
 *.swp
 
 .svn
-log/*.log
+*.log
 tmp/**
+
+# Security #
+id_rsa
 
 # Folder view configuration files
 Desktop.ini
