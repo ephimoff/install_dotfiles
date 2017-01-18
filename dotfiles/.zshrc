@@ -86,17 +86,30 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias ll='ls -alF'
 alias v="vim"
 alias vi="vim"
-# Shortcuts
+alias o="open"
+alias oo="open ."
+alias x+="chmod +x"
+alias -- +x="chmod +x"
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Download file and save it with filename of remote file
+alias get="curl -O -L"
+
+# Directories
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pro="cd ~/Projects"
+
 
 #orion
 alias rdep="rgrav deploy -R unison_frontend:0 -R unison_backend:0 -R unison_haproxy:0 -R connect:0 -p ec2"

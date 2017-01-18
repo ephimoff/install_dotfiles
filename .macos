@@ -23,9 +23,6 @@ sudo scutil --set LocalHostName "$_hn"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$_hn"
 ok
 
-running "Disable the sound effects on boot.  To re-enable: sudo nvram -d SystemAudioVolume"
-sudo nvram SystemAudioVolume="%80"
-ok
 
 
 
@@ -44,9 +41,9 @@ running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ok
 
-running "Remove duplicates in the 'Open With' menu"
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-ok
+# running "Remove duplicates in the 'Open With' menu"
+# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+# ok
 
 ###############################################################################
 # Trackpad, keyboard
@@ -68,9 +65,9 @@ running "Trackpad: disable swipe between pages"
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
 ok
 
-running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
-ok
+# running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
+# defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+# ok
 
 running "Keyboard: Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -85,15 +82,15 @@ ok
 # defaults write com.apple.screensaver askForPassword -int 1
 # defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-running "Save screenshots to the Pictures directory"
+running "Screen: Save screenshots to the Pictures directory"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
 ok
 
-running "Save screenshots in PNG format"
+running "Screen: Save screenshots in PNG format"
 defaults write com.apple.screencapture type -string "png"
 ok # (other options: BMP, GIF, JPG, PDF, TIFF)
 
-running "Disable shadow in screenshots"
+running "Screen: Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 ok
 
@@ -101,12 +98,6 @@ ok
 # Finder
 ###############################################################################
 
-running "Icons for hard drives, servers, and removable media on the desktop"
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-ok
 
 running "Finder: show hidden files by default"
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -132,7 +123,7 @@ running "Finder: when performing a search, search the current folder by default"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 ok
 
-running "Finder: use list view in all Finder windows by default"
+running "Finder: use column view in all Finder windows by default"
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 ok
