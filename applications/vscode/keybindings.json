@@ -2,5 +2,4 @@
 [
     { "key": "alt+m",           "command": "markdown.showPreview",
                                      "when": "editorFocus" }
-                    // sdklsldkslkd
 ]
