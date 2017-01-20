@@ -1,0 +1,6 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "alt+m",           "command": "markdown.showPreview",
+                                     "when": "editorFocus" }
+                    // sdklsldkslkd
+]
