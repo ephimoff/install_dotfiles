@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Visual Studio Code
+###############################################################################
+
+settingsSource=$HOME/Projects/dotfiles/applications/vscode/settings.json
+keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
+vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
+
+vsCodeUser=$HOME/Library/Application\ Support/Code/User
+
+settingsTarget=$packagesUser/settings.json
+keybindingsTarget=$packagesUser/keybindings.json
+vsiconsTarget=$packagesUser/vsicons.settings.json
+
+# make the required directories if they don't exist
+[[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
+
+
+# link config files
+if [[ -f "$settingsSource" ]] ; then
+
+    ln -f -s "$settingsSource" "$settingsTarget"
+fi
+if [[ -f "$keybindingsSource" ]] ; then
+
+    ln -f -s "$keybindingsSource" "$keybindingsTarget"
+fi
+if [[ -f "$vsiconsSource" ]] ; then
+
+    ln -f -s "$vsiconsSource" "$vsiconsTarget"
+fi
+
