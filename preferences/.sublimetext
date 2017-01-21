@@ -4,6 +4,7 @@
 # Sublime Text
 ###############################################################################
 
+
 installedPackages=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 packageControl=$installedPackages/Package\ Control.sublime-package
 
@@ -13,22 +14,22 @@ preferencesTarget=$packagesUser/Preferences.sublime-settings
 packageControlSource=$HOME/Projects/dotfiles/applications/sublimetext/Package\ Control.sublime-settings
 packageControlTarget=$packagesUser/Package\ Control.sublime-settings
 
-# make the required directories if they don't exist
+running "Sublime Text: Making the required directories if they don't exist"
 [[ ! -d "$installedPackages" ]] && mkdir -p "$installedPackages"
 [[ ! -d "$packagesUser" ]] && mkdir -p "$packagesUser"
+ok
 
-# install package control
 if [[ ! -f "$packageControl" ]] ; then
-    running "Downloading package control."
+    running "Sublime Text: Downloading package control."
     if ! curl -# -f -o "$packageControl" https://packagecontrol.io/Package%20Control.sublime-package
     then
-        error "Something went wrong downloading package control."
+        error "Sublime Text: Something went wrong downloading package control."
         exit 1
     fi
     ok
 fi
 
-# link config files
+running "Sublime Text: Linking config files"
 if [[ -f "$preferencesSource" ]] ; then
     # Hack: temporarily removing 'color_scheme' from the preferences file until Sublime-Linter is auto installed
     # -- use git checkout to restore the line.
@@ -39,3 +40,4 @@ fi
 if [[ -f "$packageControlSource" ]] ; then
     ln -f -s "$packageControlSource" "$packageControlTarget"
 fi
+ok

@@ -5,7 +5,7 @@
 ###############################################################################
 
 vim=$(which vim)
-
+running "VIM: Installing plugins"
 # install plugins
 mkdir -p ~/.vim/bundle/
 if [[ ! -d ~/.vim/bundle/Vundle.vim ]] ; then
@@ -13,3 +13,4 @@ if [[ ! -d ~/.vim/bundle/Vundle.vim ]] ; then
 fi
 
 $vim -e -c PluginInstall -c quitall 2> /dev/null
+ok

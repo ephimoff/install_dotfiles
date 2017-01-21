@@ -1,7 +1,7 @@
 ###############################################################################
 # Skype
 ###############################################################################
-
+running "Skype: Setting defaults (calls monitoring, contact list view, hiding watermark, compact chat style etc.)"
 defaults write com.skype.skype CallsMonitorEnabled -int 0
 defaults write com.skype.skype ContactListViewMode -int 1
 defaults write com.skype.skype DialpadOpen -int 0
@@ -13,3 +13,4 @@ defaults write com.skype.skype SKDisableWelcomeTour -int 1
 defaults write com.skype.skype SKShowWatermark -int 0
 defaults write com.skype.skype SKUseAwayInactiveTime -int 0
 defaults write com.skype.skype SKUseCompactChatStyle -int 1
+ok

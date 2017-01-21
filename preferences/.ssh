@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+running "SSH: Configuring hosts (github, localhost etc.)"
 [[ ! -d ~/.ssh ]] && mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
@@ -29,3 +29,4 @@ EOF
 fi
 
 [[ -f ~/.ssh/config ]] && chmod 600 ~/.ssh/config
+ok

@@ -5,6 +5,8 @@
 ###############################################################################
 
 if [[ -f "/usr/bin/vagrant" ]] ; then
+    running "Vagrant: Installing plugins"
     /usr/bin/vagrant plugin install vagrant-hostmanager
     /usr/bin/vagrant plugin install vagrant-aws
+    ok
 fi

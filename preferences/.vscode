@@ -14,11 +14,11 @@ settingsTarget=$packagesUser/settings.json
 keybindingsTarget=$packagesUser/keybindings.json
 vsiconsTarget=$packagesUser/vsicons.settings.json
 
-# make the required directories if they don't exist
+running "VS Code: Making the required directories if they don't exist"
 [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
+ok
 
-
-# link config files
+running "VS Code: Linking config files"
 if [[ -f "$settingsSource" ]] ; then
 
     ln -f -s "$settingsSource" "$settingsTarget"
@@ -31,4 +31,18 @@ if [[ -f "$vsiconsSource" ]] ; then
 
     ln -f -s "$vsiconsSource" "$vsiconsTarget"
 fi
+ok
 
+running "VS Code: Installing extensions"
+code --install-extension annsk.alignment
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension dbankier.vscode-instant-markdown
+code --install-extension emilast.LogFileHighlighter
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension PKief.material-icon-theme
+code --install-extension rebornix.Ruby
+code --install-extension hoovercj.ruby-linter
+code --install-extension misogi.ruby-rubocop
+code --install-extension bbenoist.vagrant
+code --install-extension DotJoshJohnson.xml
+ok
