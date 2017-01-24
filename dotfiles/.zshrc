@@ -56,6 +56,8 @@ plugins=(git copydir z osx)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# rbenv
+eval "$(rbenv init - zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/Projects/rgrav:$PATH"
@@ -114,3 +116,4 @@ alias pro="cd ~/Projects"
 #orion
 alias rdep="rgrav deploy -R unison_frontend:0 -R unison_backend:0 -R unison_haproxy:0 -R connect:0 -p ec2"
 alias rinv="rgrav invoke -p ec2"
+
