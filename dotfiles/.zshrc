@@ -29,7 +29,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -59,6 +59,8 @@ source $ZSH/oh-my-zsh.sh
 # rbenv
 eval "$(rbenv init - zsh)"
 
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/Projects/rgrav:$PATH"
 
@@ -83,6 +85,10 @@ export PATH="$HOME/Projects/scripts:$PATH"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# for Sierra remember ssh keys
+# Add all known keys to the SSH agent
+ssh-add -A 2>/dev/null;
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
