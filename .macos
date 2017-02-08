@@ -41,9 +41,6 @@ running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ok
 
-# running "Remove duplicates in the 'Open With' menu"
-# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-# ok
 
 ###############################################################################
 # Trackpad, keyboard
@@ -65,9 +62,9 @@ running "Trackpad: disable swipe between pages"
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
 ok
 
-# running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
-# defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
-# ok
+running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+ok
 
 running "Keyboard: Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -77,10 +74,10 @@ ok
 # Screen
 ###############################################################################
 
-# Require password immediately after sleep or screen saver begins
-# Commented due to overwriting by work policies
-# defaults write com.apple.screensaver askForPassword -int 1
-# defaults write com.apple.screensaver askForPasswordDelay -int 0
+running "Screen: Require password immediately after sleep or screen saver begins"
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+ok
 
 running "Screen: Save screenshots to the Pictures directory"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
@@ -97,7 +94,6 @@ ok
 ###############################################################################
 # Finder
 ###############################################################################
-
 
 running "Finder: show hidden files by default"
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -164,20 +160,6 @@ ok
 # Dock, Dashboard, and hot corners
 ###############################################################################
 
-running "Dock: minimise and maximise effect set to 'scale'"
-# Possible settings: genie, scale
-defaults write com.apple.dock mineffect -string "scale"
-ok
-
-# Show indicator lights for open applications in the Dock
-# defaults write com.apple.dock show-process-indicators -bool true
-
-# Don’t animate opening applications from the Dock
-# defaults write com.apple.dock launchanim -bool true
-
-# Speed up Mission Control animations
-# defaults write com.apple.dock expose-animation-duration -float 0.1
-
 running "Don’t show Dashboard as a Space"
 defaults write com.apple.dock dashboard-in-overlay -bool true
 ok
@@ -185,12 +167,6 @@ ok
 running "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 ok
-
-# Remove the animation when hiding/showing the Dock
-# defaults write com.apple.dock autohide-time-modifier -int 0
-
-# Minimise applications to their icon
-# defaults write com.apple.dock "minimize-to-application" -bool true
 
 running "Top right screen corner → Put display to sleep"
 # Hot corners:
@@ -226,15 +202,6 @@ running "Prevent Photos from opening automatically when devices are plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ok
 
-###############################################################################
-# Energy preferences
-###############################################################################
-
-# battery
-# sudo pmset -b sleep 20 disksleep 15 displaysleep 10 halfdim 1
-
-# power adapter
-# sudo pmset -c sleep 0 disksleep 0 displaysleep 10 halfdim 1
 
 ###############################################################################
 # Firewall
@@ -244,9 +211,6 @@ running "Enable the firewall"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 ok
 
-# Do not auto allow signed apps
-# sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
-
 running "Enable stealth mode"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 ok
@@ -255,21 +219,9 @@ ok
 # Mail
 ###############################################################################
 
-# Disable send and reply animations in Mail.app
-# defaults write com.apple.mail DisableReplyAnimations -bool true
-# defaults write com.apple.mail DisableSendAnimations -bool true
-
 running "Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ok
-
-# Display emails in threaded mode, sorted by date (oldest at the top)
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
-
-# Default sort order
-# defaults write com.apple.mail InboxViewerAttributes -dict-add "SortedDescending" -string "yes"
 
 running "Mail.app: Disable inline attachments (just show the icons)"
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
@@ -283,20 +235,10 @@ ok
 # Safari & WebKit
 ###############################################################################
 
-# Set Safari’s home page to `about:blank` for faster loading
-# defaults write com.apple.Safari HomePage -string "about:blank"
-# defaults write com.apple.Safari NewTabBehavior -int 0
-# defaults write com.apple.Safari NewWindowBehavior -int 0
 
 running "Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 ok
-
-# Allow hitting the Backspace key to go to the previous page in history
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
-
-# Hide Safari’s bookmarks bar by default
-# defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 running "Safari: Disable Safari’s thumbnail cache for History and Top Sites"
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
@@ -325,7 +267,6 @@ running "TexEdit: Open and save files as UTF-8 in TextEdit"
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 ok
-
 
 
 # Finished

@@ -61,7 +61,8 @@
 
     # diffing
     d = "!f() { git diff --patch-with-stat HEAD~${1:-0}; }; f"
-    df = "!f() { git diff --stat HEAD~${1:-0}; }; f"
+    dlf = "!f() { git diff --stat HEAD~${1:-0}; }; f"
+    df = "!f() { git log -p --no-merges ${1}; }; f"
 
     # searching
     g = grep -I
@@ -94,13 +95,6 @@
     # status
     st = status
 
-
-# [difftool "sourcetree"]
-# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-# 	path = 
-# [mergetool "sourcetree"]
-# 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-# 	trustExitCode = true
 [user]
-	name = Anton Efimov
-	email = anton.efimov@orionhealth.com
+    name = Anton Efimov
+    email = anton.efimov@orionhealth.com
