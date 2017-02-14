@@ -7,13 +7,14 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Enable command auto-correction.
 #ENABLE_CORRECTION="true"
 
 # plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git copydir z osx)
+plugins=(git copydir z osx brew)
 
 source $ZSH/oh-my-zsh.sh
 
