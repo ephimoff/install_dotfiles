@@ -10,6 +10,10 @@
 # ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# powerlevel9k customisation
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+POWERLEVEL9K_TIME_BACKGROUND='black'
+POWERLEVEL9K_TIME_FOREGROUND='grey'
 # Enable command auto-correction.
 #ENABLE_CORRECTION="true"
 
@@ -32,7 +36,7 @@ export PATH="$HOME/.usr/graviton-cli/bin:$PATH"
 export PATH="$HOME/Projects/scripts:$PATH"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # for Sierra remember ssh keys
 # Add all known keys to the SSH agent

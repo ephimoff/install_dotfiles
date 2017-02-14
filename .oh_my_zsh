@@ -7,6 +7,10 @@ running "Installing oh-my-zsh (http://ohmyz.sh)"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ok
 
+running "Instaling oh-my-zsh theme: powerlevel9k (see https://github.com/bhilburn/powerlevel9k for more info)"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+ok
+
 running "Making zsh default shell"
 chsh -s /bin/zsh
 ok
