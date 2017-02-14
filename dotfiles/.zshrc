@@ -10,7 +10,7 @@
 ZSH_THEME="agnoster"
 
 # Enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git copydir z osx)
