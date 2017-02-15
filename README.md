@@ -58,6 +58,9 @@ A collection of scripts to bootstrap a clean install of OS X.
     # Install command line package manager and additional applications.
     ~/Projects/dotfiles/.cask
 
+    # Install MAS using Homebrew and apps from Mac App Store
+    ~/Projects/dotfiles/.mas
+
     # Apply preferences to applications.
     ~/Projects/dotfiles/.preferences
 
@@ -75,6 +78,104 @@ Run the following commands to get the latest version of this project:
 cd ~/Projects/dotfiles/
 git pull origin master
 ```
+
+## What's included
+
+### .directories
+
+Creates 3 folders:
+
+1. `~/Downloads/.transmission/incomplete`
+1. `~/Projects/eclipse_workspace`
+1. `~/tmp`
+
+Create a symlink to the scripts
+
+### .dotfiles
+
+* Backs up the current dotfiles to `~/.dotfiles_backup`
+* Sets up aliases, shell variables and paths, creates useful functions
+* Sets up GIT config (i.e. GIT message, GIT ignore etc.)
+* Adds `.zshrc` configuration
+
+### .templates
+
+* Sets up GIT credentials
+* Adds more paths
+
+### .macos
+
+Sets up macOS settings. See the output to find out what are the settings.
+
+### .brew
+
+Updates Homebrew and installs the following packages:
+
+* `bash`
+* `bash-completion`
+* `docker-compose-completion`
+* `git`
+* `heroku`
+* `rbenv ruby-build`
+* `sqlite3`
+* `jq`
+* `vagrant-completion`
+* `vim --with-custom-python`
+* `zsh`
+
+### .cask
+
+Install Cask and the following packages apps and fonts:
+
+* `caffeine`
+* `cyberduck`
+* `dash`
+* `docker`
+* `dropbox`
+* `firefox`
+* `flycut`
+* `font-fira-code`
+* `font-source-code-pro`
+* `font-source-code-pro-for-powerline`
+* `google-chrome`
+* `google-drive`
+* `hipchat`
+* `iterm2`
+* `java`
+* `joinme`
+* `skype`
+* `soapui`
+* `sourcetree`
+* `spectacle`
+* `spotify`
+* `sublime-text`
+* `transmission`
+* `virtualbox`
+* `virtualbox-extension-pack`
+* `visual-studio-code`
+* `vlc`
+
+### .preferences
+
+Updates preferences for the following apps:
+
+* ant
+* firefox
+* java
+* joinme
+* python
+* ruby
+* skype
+* sourcetree
+* ssh
+* sublime text
+* vagrant
+* vim
+* visual studio code
+
+### .oh_my_zsh
+
+Installs oh_my_zsh shell
 
 ## Feedback
 
