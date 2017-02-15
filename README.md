@@ -1,10 +1,10 @@
 # dotfiles
 
-[![Build Status](https://travis-ci.org/craighurley/dotfiles.svg?branch=master)](https://travis-ci.org/craighurley/dotfiles)
+[![Build Status](https://travis-ci.org/ephimoff/dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/dotfiles)
 
 ## Introduction
 
-A collection of scripts to bootstrap a clean install of OS X.
+A collection of scripts to bootstrap a clean install of macOS.
 
 ## Installation
 
