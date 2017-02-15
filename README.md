@@ -123,6 +123,17 @@ Updates Homebrew and installs the following packages:
 * `vim --with-custom-python`
 * `zsh`
 
+### .mas
+
+Install Mac App Store apps:
+
+* The Unarchiver
+* 1Password
+* OneDrive
+* iMovie
+* Pages
+* iA Writer
+
 ### .cask
 
 Install Cask and the following packages apps and fonts:
@@ -160,22 +171,22 @@ Install Cask and the following packages apps and fonts:
 Updates preferences for the following apps:
 
 * ant
-* firefox
+* Firefox
 * java
-* joinme
+* joinMe
 * python
 * ruby
-* skype
-* sourcetree
+* Skype
+* SourceTree
 * ssh
-* sublime text
-* vagrant
+* Sublime Text
+* Vagrant
 * vim
-* visual studio code
+* Visual Studio Code
 
 ### .oh_my_zsh
 
-Installs oh_my_zsh shell
+Installs [oh_my_zsh](http://ohmyz.sh) shell
 
 ## Feedback
 
