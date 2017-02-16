@@ -170,9 +170,7 @@ Install Cask and the following packages apps and fonts:
 
 Updates preferences for the following apps:
 
-* ant
 * Firefox
-* java
 * joinMe
 * python
 * ruby
