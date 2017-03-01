@@ -38,6 +38,9 @@ export PATH="$HOME/Projects/scripts:$PATH"
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
+# go
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+
 # for Sierra remember ssh keys
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;

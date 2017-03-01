@@ -1,90 +1,90 @@
-alias ..="cd .."
+# # alias ..="cd .."
 
-alias c="clear"
-alias e="exit"
-alias h="history"
-alias j="jobs"
+# # alias c="clear"
+# # alias e="exit"
+# # alias h="history"
+# # alias j="jobs"
 
-# docker
-alias d='docker'
+# # docker
+# # alias d='docker'
 
-# vim
-alias v="vim"
-alias vi="vim"
+# # vim
+# alias v="vim"
+# alias vi="vim"
 
-# grep/ack
-alias grep='grep -I'
-alias ack='ack --no-group --color-match=on_red'
+# # grep/ack
+# alias grep='grep -I'
+# alias ack='ack --no-group --color-match=on_red'
 
-# ls
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-else # OS X `ls`
-	colorflag="-G"
-fi
+# # ls
+# # Detect which `ls` flavor is in use
+# if ls --color > /dev/null 2>&1; then # GNU `ls`
+# 	colorflag="--color"
+# else # OS X `ls`
+# 	colorflag="-G"
+# fi
 
-# List all files colorized in long format
-alias l="ls -lhF ${colorflag}"
+# # List all files colorized in long format
+# alias l="ls -lhF ${colorflag}"
 
-# List all files colorized in long format, including dot files
-alias ll="ls -lAhF ${colorflag}"
+# # List all files colorized in long format, including dot files
+# alias ll="ls -lAhF ${colorflag}"
 
-# Always use color output for `ls`
-alias ls="command ls -h ${colorflag}"
-#export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+# # Always use color output for `ls`
+# alias ls="command ls -h ${colorflag}"
+# #export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 
-# addional ls
-alias lr='ll -R'         # Lists human readable sizes, recursively.
-alias la='ll -A'         # Lists human readable sizes, hidden files.
-alias lx='ll -XB'        # Lists sorted by extension (GNU only).
-alias lk='ll -Sr'        # Lists sorted by size, largest last.
-alias lt='ll -tr'        # Lists sorted by date, most recent last.
-alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
-alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
+# # addional ls
+# alias lr='ll -R'         # Lists human readable sizes, recursively.
+# alias la='ll -A'         # Lists human readable sizes, hidden files.
+# alias lx='ll -XB'        # Lists sorted by extension (GNU only).
+# alias lk='ll -Sr'        # Lists sorted by size, largest last.
+# alias lt='ll -tr'        # Lists sorted by date, most recent last.
+# alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
+# alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 
-# List tmux windows
-# alias t="tmux"
-# alias tls='tmux ls'
+# # List tmux windows
+# # alias t="tmux"
+# # alias tls='tmux ls'
 
-# lsof
-alias lsof='lsof -n -P'
+# # lsof
+# alias lsof='lsof -n -P'
 
-# nmap
-alias nmap='nmap -n -Pn'
+# # nmap
+# alias nmap='nmap -n -Pn'
 
-# pstree
-alias pstree='pstree -g 2'
+# # pstree
+# alias pstree='pstree -g 2'
 
-# mkpasswd clone using python. ensure passlib is installed (pip install passlib)
-alias mkpasswd="python -c 'from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.encrypt(getpass.getpass())'"
+# # mkpasswd clone using python. ensure passlib is installed (pip install passlib)
+# alias mkpasswd="python -c 'from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.encrypt(getpass.getpass())'"
 
-# DNS
-alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias dnsflush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias dns="scutil --dns"
+# # DNS
+# alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# alias dnsflush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# alias dns="scutil --dns"
 
-# Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+# # Clean up LaunchServices to remove duplicates in the “Open With” menu
+# alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
-# URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+# # URL-encode strings
+# alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
+# # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
+# alias plistbuddy="/usr/libexec/PlistBuddy"
 
-# tcpdump aliases
-alias tcpdump="tcpdump -nn"
-alias tcpdump-http="sudo tcpdump -nn -A -s0 -q 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'"
+# # tcpdump aliases
+# alias tcpdump="tcpdump -nn"
+# alias tcpdump-http="sudo tcpdump -nn -A -s0 -q 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'"
 
-# aws
-alias aws-regions="aws ec2 describe-regions --output json | jq '.Regions[]'"
+# # aws
+# alias aws-regions="aws ec2 describe-regions --output json | jq '.Regions[]'"
 
-# Shortcuts
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias pro="cd ~/Projects"
-alias g="git"
+# # Shortcuts
+# alias dl="cd ~/Downloads"
+# alias dt="cd ~/Desktop"
+# alias pro="cd ~/Projects"
+# alias g="git"
 
-alias ga='git add '
-alias ga='git checkout '
+# alias ga='git add '
+# alias ga='git checkout '

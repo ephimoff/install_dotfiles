@@ -159,7 +159,6 @@ Install Cask and the following packages apps and fonts:
 * `sourcetree`
 * `spectacle`
 * `spotify`
-* `sublime-text`
 * `transmission`
 * `virtualbox`
 * `virtualbox-extension-pack`
@@ -170,14 +169,12 @@ Install Cask and the following packages apps and fonts:
 
 Updates preferences for the following apps:
 
-* Firefox
 * joinMe
 * python
 * ruby
 * Skype
 * SourceTree
 * ssh
-* Sublime Text
 * Vagrant
 * vim
 * Visual Studio Code

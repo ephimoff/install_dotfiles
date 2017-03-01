@@ -12,5 +12,9 @@
         "MD033": false
     }
 ,
-"git.confirmSync": false
+"git.confirmSync": false,
+"window.reopenFolders": "all",
+"window.restoreFullscreen": true,
+"workbench.welcome.enabled": false,
+"workbench.iconTheme": "material-icon-theme"
 }
