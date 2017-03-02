@@ -190,8 +190,8 @@ Suggestions/improvements [welcome](https://github.com/ephimoff/dotfiles/issues)!
 ## Acknowedgements
 
 * [Mathias Bynens](https://github.com/mathiasbynens)
-* [Craig Hurly](https://github.com/craighurley/dotfiles)
-* [atomatic](https://github.com/atomantic/dotfiles)
+* [Craig Hurley](https://github.com/craighurley/dotfiles)
+* [atomantic](https://github.com/atomantic/dotfiles)
 
 ## Warning / Liability
 
