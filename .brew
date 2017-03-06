@@ -21,14 +21,19 @@ ok
 running "Installing applications..."
 brew tap homebrew/completions
 
+brew install ack
+brew install ansible
 brew install bash
 brew install bash-completion
 brew install docker-compose-completion
 brew install git
 brew install heroku
+brew install jq
+brew install rbenv
 brew install rbenv ruby-build
+brew install rbenv-bundler
+brew install shellcheck
 brew install sqlite3
-brew install jq #jq is a lightweight and flexible command-line JSON processor
 brew install vagrant-completion
 brew install vim --with-custom-python
 brew install zsh

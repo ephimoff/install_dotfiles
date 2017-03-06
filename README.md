@@ -111,14 +111,18 @@ Sets up macOS settings. See the output to find out what are the settings.
 
 Updates Homebrew and installs the following packages:
 
-* `bash`
+* `ack`
+* `ansible`
 * `bash-completion`
+* `bash`
 * `docker-compose-completion`
 * `git`
 * `heroku`
-* `rbenv ruby-build`
-* `sqlite3`
 * `jq`
+* `rbenv ruby-build`
+* `rbenv`
+* `shellcheck`
+* `sqlite3`
 * `vagrant-completion`
 * `vim --with-custom-python`
 * `zsh`
@@ -164,6 +168,7 @@ Install Cask and the following packages apps and fonts:
 * `virtualbox-extension-pack`
 * `visual-studio-code`
 * `vlc`
+* `qlstephen`
 
 ### .preferences
 
