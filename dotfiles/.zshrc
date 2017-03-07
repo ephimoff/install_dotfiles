@@ -41,6 +41,9 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 # go
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
+# packer
+export PATH="$PATH:/usr/local/packer"
+
 # for Sierra remember ssh keys
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
@@ -49,39 +52,4 @@ ssh-add -A 2>/dev/null;
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-alias ll='ls -alF'
-alias v="vim"
-alias vi="vim"
-alias o="open"
-alias oo="open ."
-alias x+="chmod +x"
-alias -- +x="chmod +x"
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
-
-# Remove duplicates in the 'Open With' menu
-alias clearOpen="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
-
-# Empty the Trash on all mounted volumes and the main HDD
-# Also, clear Apple’s System Logs to improve shell startup speed
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-
-# Download file and save it with filename of remote file
-alias get="curl -O -L"
-
-# Directories
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias pro="cd ~/Projects"
-
-#orion
-alias rdep="rgrav deploy -R unison_frontend:0 -R unison_backend:0 -R unison_haproxy:0 -R connect:0 -p ec2"
-alias rinv="rgrav invoke -p ec2"
-
-#git
-alias gst="git s"
-
-#vagrant
-alias va="vagrant"
+source "$ZSH_CUSTOM/.aliases"

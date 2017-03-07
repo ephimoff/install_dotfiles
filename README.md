@@ -119,6 +119,7 @@ Updates Homebrew and installs the following packages:
 * `git`
 * `heroku`
 * `jq`
+* `packer`
 * `rbenv ruby-build`
 * `rbenv`
 * `shellcheck`

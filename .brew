@@ -29,6 +29,7 @@ brew install docker-compose-completion
 brew install git
 brew install heroku
 brew install jq
+brew install packer
 brew install rbenv
 brew install rbenv ruby-build
 brew install rbenv-bundler
