@@ -18,7 +18,7 @@ A collection of scripts to bootstrap a clean install of macOS.
     xcode-select --install
     ```
 
-1. In order to get all apps from `.mas` installed you have to sign in Apple Mac App Store first. Alternatively, you can comment out `$directory/.macos` in `bootstrap.sh`.
+1. In order to get all apps from `.mas` installed you have to sign in to Apple Mac App Store first. Alternatively, you can comment out `$directory/.macos` in `bootstrap.sh`.
 
 1. Clone this repo by running the following commands:
 

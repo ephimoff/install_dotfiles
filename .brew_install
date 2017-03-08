@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./bin/echos.sh
+source ~/Projects/dotfiles/bin/echos.sh
 
 # Start
 bot "Starting $(basename "$0")"
