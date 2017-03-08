@@ -1,6 +1,11 @@
+#!/usr/bin/env bash
+
 ###############################################################################
 # Skype
 ###############################################################################
+
+source ./bin/echos.sh
+
 running "Skype: Setting defaults (calls monitoring, contact list view, hiding watermark, compact chat style etc.)"
 defaults write com.skype.skype CallsMonitorEnabled -int 0
 defaults write com.skype.skype ContactListViewMode -int 1

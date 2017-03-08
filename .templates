@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source ./bin/echos.sh
 # Start
 bot "Starting $(basename "$0")"
 

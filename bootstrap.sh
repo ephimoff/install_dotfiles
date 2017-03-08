@@ -18,4 +18,4 @@ $directory/.preferences
 $directory/.oh_my_zsh
 
 # Finished
-bot "$(basename "$0") complete."
+bot "$(basename "$0") complete.  Note that some of these changes require a logout/restart to take effect. Also, please check the accessability settings to enable access for certain apps."

@@ -1,6 +1,11 @@
+#!/usr/bin/env bash
+
 ###############################################################################
 # join.me
 ###############################################################################
+
+source ./bin/echos.sh
+
 running "join.me: Setting Default Conference Country to New Zealand"
 defaults write com.logmein.join.me DefaultConferenceCountry -string "New Zealand - Auckland"
 ok

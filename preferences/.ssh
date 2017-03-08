@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+source ./bin/echos.sh
+
 running "SSH: Configuring hosts (github, localhost etc.)"
 [[ ! -d ~/.ssh ]] && mkdir -p ~/.ssh
 chmod 700 ~/.ssh

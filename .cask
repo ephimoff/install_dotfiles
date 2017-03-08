@@ -33,18 +33,12 @@ apps=(
     flycut
     font-fira-code
     font-source-code-pro
-    font-source-code-pro-for-powerline
-    google-chrome
-    google-drive
     hipchat
     iterm2
     java
-    joinme
-    skype
     soapui
     sourcetree
     spectacle
-    spotify
     transmission
     virtualbox
     virtualbox-extension-pack
@@ -56,6 +50,17 @@ apps=(
 running "Installing apps... "
 brew cask install  --require-sha "${apps[@]}"
 ok
+
+running "Installing apps that don't have checksum 256 defined..."
+brew cask install font-source-code-pro-for-powerline
+brew cask install google-chrome    
+brew cask install google-drive
+brew cask install joinme
+brew cask install skype
+brew cask install spotify
+ok
+
+
 
 running "Cleaning up unneeded files..."
 brew cleanup

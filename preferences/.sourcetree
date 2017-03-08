@@ -1,6 +1,11 @@
+#!/usr/bin/env bash
+
 ###############################################################################
 # SourceTree
 ###############################################################################
+
+source ./bin/echos.sh
+
 running "SourceTree: Setting defaults"
 defaults write com.torusknot.SourceTreeNotMAS allowForcePush -int 1
 defaults write com.torusknot.SourceTreeNotMAS alwaysDisplayFullOutput -int 0

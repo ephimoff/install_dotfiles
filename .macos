@@ -270,4 +270,4 @@ ok
 
 
 # Finished
-bot "$(basename "$0") complete. Note that some of these changes require a logout/restart to take effect."
+bot "$(basename "$0") complete."
