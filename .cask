@@ -18,7 +18,7 @@ ok
 
 # Install Caskroom
 running "Installing caskroom... "
-brew install brew-cask
+# brew install brew-cask
 brew tap caskroom/versions
 ok
 

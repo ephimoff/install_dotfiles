@@ -1,13 +1,9 @@
 ---
-os: osx
+language: python
+
 osx_image: xcode8.2
 
-language: python
 python: "2.7"
-
-# before_install:
-#   - sudo apt-get -qq update
-#   - sudo apt-get install -qq -y shellcheck
 
 before_install:
   - brew update
