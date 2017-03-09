@@ -12,15 +12,13 @@ vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
-# shellcheck disable=SC2154
-settingsTarget=$packagesUser/settings.json
-keybindingsTarget=$packagesUser/keybindings.json
-vsiconsTarget=$packagesUser/vsicons.settings.json
+settingsTarget=$vsCodeUser/settings.json
+keybindingsTarget=$vsCodeUser/keybindings.json
+vsiconsTarget=$vsCodeUser/vsicons.settings.json
 
-running "VS Code: Making the required directories if they don't exist"
-# shellcheck disable=SC2154
-[[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
-ok
+# running "VS Code: Making the required directories if they don't exist"
+# [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
+# ok
 
 running "VS Code: Linking config files"
 if [[ -f "$settingsSource" ]] ; then
