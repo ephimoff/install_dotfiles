@@ -3,7 +3,7 @@
 ###############################################################################
 # join.me
 ###############################################################################
-
+# shellcheck disable=SC1091
 source ./bin/echos.sh
 
 running "join.me: Setting Default Conference Country to New Zealand"

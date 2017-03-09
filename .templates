@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# shellcheck disable=SC1091
 source ./bin/echos.sh
 # Start
 bot "Starting $(basename "$0")"
