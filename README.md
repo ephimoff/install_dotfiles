@@ -148,7 +148,6 @@ Install Cask and the following packages apps and fonts:
 
 * `caffeine`
 * `cyberduck`
-* `dash`
 * `docker`
 * `dropbox`
 * `firefox`

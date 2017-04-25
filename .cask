@@ -27,7 +27,6 @@ ok
 apps=(
     caffeine
     cyberduck
-    dash
     docker
     dropbox
     firefox
