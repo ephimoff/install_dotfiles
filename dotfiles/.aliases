@@ -7,13 +7,11 @@ alias -- -="cd -"
 
 # Shortcuts
 alias d='docker'
-alias dl="cd ~/Downloads"
 alias g="git"
-alias gst="git s"
 alias h="history"
 alias o="open"
 alias oo="open ."
-alias pro="cd ~/projects"
+alias pro="cd ~/Projects"
 alias v="vim"
 alias va="vagrant"
 alias vi="vim"
@@ -49,15 +47,9 @@ alias lc='lt -c'         # Lists sorted by date, most recent last, shows change 
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 
 # DNS
-alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias dnsflush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias dns="scutil --dns"
-
-# Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-# Remove duplicates in the 'Open With' menu
-alias clearOpen="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
+# alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# alias dnsflush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# alias dns="scutil --dns"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -67,10 +59,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; s
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# alias ll='ls -alF'
+# Recursively delete `.DS_Store` files and Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias cleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder && find . -type f -name '*.DS_Store' -ls -delete"
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"

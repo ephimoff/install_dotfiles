@@ -50,6 +50,9 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 # packer
 export PATH="$PATH:/usr/local/packer"
 
+# pager
+export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
+
 # for Sierra remember ssh keys
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
