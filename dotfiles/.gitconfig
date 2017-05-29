@@ -93,6 +93,7 @@
     r = "!f() { git rebase -i HEAD~${1:-1}; }; f"
 
     # committing
+    c = commit
     cnm = commit -m 'no message'
 
     # status
