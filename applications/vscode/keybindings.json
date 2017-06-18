@@ -3,6 +3,5 @@
     { "key": "alt+m",           "command": "markdown.showPreview",
                                      "when": "editorFocus" },
     { "key": "shift+cmd+d",        "command": "editor.action.copyLinesDownAction",
-                                     "when": "editorTextFocus && !editorReadonly" },
-
+                                     "when": "editorTextFocus && !editorReadonly" }
 ]
