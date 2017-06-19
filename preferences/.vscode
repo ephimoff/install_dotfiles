@@ -9,29 +9,45 @@ source ./bin/echos.sh
 settingsSource=$HOME/Projects/dotfiles/applications/vscode/settings.json
 keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
 vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
+vsSnippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
 settingsTarget=$vsCodeUser/settings.json
 keybindingsTarget=$vsCodeUser/keybindings.json
 vsiconsTarget=$vsCodeUser/vsicons.settings.json
+vsSnippetsTarget=$vsCodeUser/snippets
 
 # running "VS Code: Making the required directories if they don't exist"
 # [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
 # ok
 
 running "VS Code: Linking config files"
+running "VS Code: Linking settings.json"
 if [[ -f "$settingsSource" ]] ; then
 
     ln -f -s "$settingsSource" "$settingsTarget"
 fi
+ok
+
+running "VS Code: Linking keybindings.json"
 if [[ -f "$keybindingsSource" ]] ; then
 
     ln -f -s "$keybindingsSource" "$keybindingsTarget"
 fi
+ok
+
+running "VS Code: Linking icons"
 if [[ -f "$vsiconsSource" ]] ; then
 
     ln -f -s "$vsiconsSource" "$vsiconsTarget"
+fi
+ok
+
+running "VS Code: Linking snippets"
+if [[ -f "$vsSnippetsSource" ]] ; then
+
+    ln -s "$vsSnippetsSource" "$vsSnippetsTarget"
 fi
 ok
 
@@ -45,12 +61,14 @@ code --install-extension bbenoist.vagrant
 code --install-extension casian.plsql
 code --install-extension dbankier.vscode-instant-markdown
 code --install-extension donjayamanne.githistory
+code --install-extension donjayamanne.python
 code --install-extension emilast.LogFileHighlighter
 code --install-extension hoovercj.ruby-linter
 code --install-extension misogi.ruby-rubocop
 code --install-extension mohsen1.prettify-json
 code --install-extension rebornix.Ruby
 code --install-extension redhat.java
+code --install-extension stevejpurves.cucumber
 code --install-extension timonwong.shellcheck
 code --install-extension tonsky.theme-alabaster
 code --install-extension wmaurer.change-case

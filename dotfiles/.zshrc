@@ -63,3 +63,6 @@ ssh-add -A 2>/dev/null;
 # For a full list of active aliases, run `alias`.
 # shellcheck disable=SC1090
 source "$ZSH_CUSTOM/.aliases"
+
+# To retain the / added after completing directories or symbolic links to directories
+setopt no_auto_remove_slash
