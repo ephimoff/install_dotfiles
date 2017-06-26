@@ -55,9 +55,7 @@
 [alias]
     # logging
     l = "!f() { git log --pretty=format:\"%Cred%h %Cgreen%ad%Creset%C(yellow)%d%Creset %s %C(bold blue)%an\" --date=relative -${1:-15}; }; f"
-    lf = "!f() { git log --pretty=format:\"%Cred%h %Cgreen%ad%Creset%C(yellow)%d%Creset %s %C(bold blue)%an\" --date=relative --decorate --numstat -${1:-15}; }; f"
-    lg = "!f() { git log --pretty=format:\"%Cred%h %Cgreen%ad%Creset%C(yellow)%d%Creset %s %C(bold blue)%an\" --date=relative --graph -${1:-15}; }; f"
-    lga = "!f() { git log --pretty=format:\"%Cred%h %Cgreen%ad%Creset%C(yellow)%d%Creset %s %C(bold blue)%an\" --date=relative --graph --all --topo-order -${1:-15}; }; f"
+    lf = log --pretty=format:\"%h - %an, %ar : %s\" --graph
 
     # list all files
     ls = ls-files
