@@ -57,7 +57,7 @@ alias lu='lt -u'         # Lists sorted by date, most recent last, shows access 
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update --system; sudo gem update; sudo gem cleanup; npm update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; gem update; gem cleanup; npm update'
 
 # Recursively delete `.DS_Store` files and Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias cleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder && find . -type f -name '*.DS_Store' -ls -delete"

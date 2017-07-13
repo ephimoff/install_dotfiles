@@ -8,14 +8,19 @@
     // Markdown linter rules
     "markdownlint.config": {
         "default": true,
+        "MD013": false,
         "MD014": false,
-        "MD033": false
-    }
-,
+        "MD024": false,
+        "MD033": false,
+        "MD040": false,
+        "MD007": { "indent": 4 }
+    },
+    // Sets how line-breaks are rendered in the markdown preview. Setting it to 'true' creates a <br> for every newline.
+    "markdown.preview.breaks": true,
+
+"workbench.commandPalette.preserveInput":true,
 "git.confirmSync": false,
-"window.reopenFolders": "all",
 "window.restoreFullscreen": true,
-"workbench.welcome.enabled": false,
 "workbench.iconTheme": "material-icon-theme",
 "material-icon-theme.showUpdateMessage": false,
 "workbench.colorTheme": "Alabaster",
@@ -25,7 +30,9 @@
  // Controls whether font ligatures are enabled in the terminal.
 "terminal.integrated.fontLigatures": true,
 "files.associations": {
-    "*.mustache": "html"
+    "*.mustache": "html",
+    "*.nunjucks": "html"
 },
-"git.enableSmartCommit": true
+"git.enableSmartCommit": true,
+"workbench.startupEditor": "newUntitledFile"
 }
