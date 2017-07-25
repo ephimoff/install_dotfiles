@@ -17,6 +17,7 @@ alias va="vagrant"
 alias vi="vim"
 alias x+="chmod +x"
 alias -- +x="chmod +x"
+alias vs="code ."
 
 # grep/ack
 alias grep='grep -I'

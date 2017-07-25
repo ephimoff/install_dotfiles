@@ -66,3 +66,5 @@ source "$ZSH_CUSTOM/.aliases"
 
 # To retain the / added after completing directories or symbolic links to directories
 setopt no_auto_remove_slash
+
+fpath=(/usr/local/share/zsh-completions $fpath)
