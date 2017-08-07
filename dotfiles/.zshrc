@@ -46,6 +46,7 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # go
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+export GOPATH="$HOME/go"
 
 # packer
 export PATH="$PATH:/usr/local/packer"

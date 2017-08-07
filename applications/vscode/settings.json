@@ -34,5 +34,11 @@
     "*.nunjucks": "html"
 },
 "git.enableSmartCommit": true,
-"workbench.startupEditor": "newUntitledFile"
+"workbench.startupEditor": "newUntitledFile",
+// jshint
+"jshint.options": {
+    // enable ecma version 6
+    "esversion":6
 }
+}
+
