@@ -60,8 +60,6 @@ brew cask install skype
 brew cask install spotify
 ok
 
-
-
 running "Cleaning up unneeded files..."
 brew cleanup
 ok

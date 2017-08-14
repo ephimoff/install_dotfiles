@@ -24,16 +24,9 @@ sudo scutil --set LocalHostName "$_hn"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$_hn"
 ok
 
-
-
-
-# Enable verbose booting.  To reset to default: sudo nvram boot-args="" ; sudo nvram -d boot-args
-#sudo nvram boot-args="-v"
-
 ###############################################################################
 # General UI/UX
 ###############################################################################
-
 
 # Expand save panel by default
 # defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -41,7 +34,6 @@ ok
 running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ok
-
 
 ###############################################################################
 # Trackpad, keyboard
@@ -96,9 +88,9 @@ ok
 # Finder
 ###############################################################################
 
-running "Finder: show hidden files by default"
-defaults write com.apple.finder AppleShowAllFiles -bool true
-ok
+# running "Finder: show hidden files by default"
+# defaults write com.apple.finder AppleShowAllFiles -bool true
+# ok
 
 running "Finder: keep folders on top when sorting by name"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -203,7 +195,6 @@ running "Prevent Photos from opening automatically when devices are plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ok
 
-
 ###############################################################################
 # Firewall
 ###############################################################################
@@ -236,7 +227,6 @@ ok
 # Safari & WebKit
 ###############################################################################
 
-
 running "Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 ok
@@ -268,7 +258,6 @@ running "TexEdit: Open and save files as UTF-8 in TextEdit"
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 ok
-
 
 # Finished
 bot "$(basename "$0") complete."
