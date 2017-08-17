@@ -38,7 +38,8 @@
 // jshint
 "jshint.options": {
     // enable ecma version 6
-    "esversion":6
+    "esversion":6,
+    "multistr": true
 }
 }
 
