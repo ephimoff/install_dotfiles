@@ -58,6 +58,11 @@ export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
 
+# For some reason macos sometimes 'forgets' gitlab key
+# this is to remeber it
+ssh-add ~/.ssh/gitlab_id_rsa;
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
