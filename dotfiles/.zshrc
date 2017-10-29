@@ -49,18 +49,17 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export GOPATH="$HOME/go"
 
 # packer
-export PATH="$PATH:/usr/local/packer"
+# export PATH="$PATH:/usr/local/packer"
 
 # pager
 export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 
-# for Sierra remember ssh keys
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
 
 # For some reason macos sometimes 'forgets' gitlab key
 # this is to remeber it
-ssh-add ~/.ssh/gitlab_id_rsa;
+ssh-add ~/.ssh/gitlab_id_rsa &> /dev/null;
 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
