@@ -26,17 +26,13 @@ brew install ack
 brew install ansible
 brew install bash
 brew install bash-completion
-brew install docker-compose-completion
 brew install git
-brew install heroku
 brew install jq
 brew install pyenv
 brew install rbenv
 brew install rbenv ruby-build
 brew install rbenv-bundler
 brew install shellcheck
-brew install sqlite3
-brew install vagrant-completion
 brew install vim --with-custom-python
 brew install zsh
 ok

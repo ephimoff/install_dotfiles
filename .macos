@@ -24,16 +24,6 @@ sudo scutil --set LocalHostName "$_hn"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$_hn"
 ok
 
-###############################################################################
-# General UI/UX
-###############################################################################
-
-# Expand save panel by default
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-
-running "Check for software updates daily, not just once per week"
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-ok
 
 ###############################################################################
 # Trackpad, keyboard
@@ -129,10 +119,6 @@ running "Avoid creating .DS_Store files on USB Volumes"
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 ok
 
-running "Show the ~/Library folder"
-chflags nohidden "$HOME/Library"
-ok
-
 running "Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 ok
@@ -152,14 +138,6 @@ ok
 ###############################################################################
 # Dock, Dashboard, and hot corners
 ###############################################################################
-
-running "Don’t show Dashboard as a Space"
-defaults write com.apple.dock dashboard-in-overlay -bool true
-ok
-
-running "Don’t automatically rearrange Spaces based on most recent use"
-defaults write com.apple.dock mru-spaces -bool false
-ok
 
 running "Top right screen corner → Put display to sleep"
 # Hot corners:
@@ -238,9 +216,6 @@ ok
 running "Safari: Enable Safari’s debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 ok
-
-# Make Safari’s search banners default to Contains instead of Starts With
-# defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 running "Safari: Stop Safari sending searches to Apple"
 defaults write com.apple.Safari UniversalSearchEnabled -bool false

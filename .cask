@@ -26,20 +26,15 @@ ok
 # Install packages
 apps=(
     caffeine
-    cyberduck
     docker
     dropbox
     firefox
     flycut
     font-fira-code
     font-source-code-pro
-    hipchat
     iterm2
     java
-    soapui
-    sourcetree
     spectacle
-    transmission
     virtualbox
     virtualbox-extension-pack
     visual-studio-code

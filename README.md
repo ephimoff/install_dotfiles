@@ -20,7 +20,7 @@ A collection of scripts to bootstrap a clean install of macOS.
 
 1. In order to get all apps from `.mas` installed you have to sign in to Apple Mac App Store first. Alternatively, you can comment out `$directory/.macos` in `bootstrap.sh`.
 
-1. Clone this repo by running the following commands:
+1. Clone this repository by running the following commands:
 
     ```sh
     mkdir ~/Projects
@@ -117,16 +117,12 @@ Updates Homebrew and installs the following packages:
 * `ansible`
 * `bash-completion`
 * `bash`
-* `docker-compose-completion`
 * `git`
-* `heroku`
 * `jq`
 * `rbenv ruby-build`
 * `rbenv`
 * `pyenv`
 * `shellcheck`
-* `sqlite3`
-* `vagrant-completion`
 * `vim --with-custom-python`
 * `zsh`
 
@@ -137,7 +133,6 @@ Install Mac App Store apps:
 * The Unarchiver
 * 1Password
 * OneDrive
-* iMovie
 * Pages
 * iA Writer
 
@@ -146,7 +141,6 @@ Install Mac App Store apps:
 Install Cask and the following packages apps and fonts:
 
 * `caffeine`
-* `cyberduck`
 * `docker`
 * `dropbox`
 * `firefox`
@@ -156,13 +150,10 @@ Install Cask and the following packages apps and fonts:
 * `font-source-code-pro-for-powerline`
 * `google-chrome`
 * `google-drive`
-* `hipchat`
 * `iterm2`
 * `java`
 * `joinme`
 * `skype`
-* `soapui`
-* `sourcetree`
 * `spectacle`
 * `spotify`
 * `transmission`
@@ -180,7 +171,6 @@ Updates preferences for the following apps:
 * python
 * ruby
 * Skype
-* SourceTree
 * ssh
 * Vagrant
 * vim
@@ -202,4 +192,4 @@ Suggestions/improvements [welcome](https://github.com/ephimoff/dotfiles/issues)!
 
 ## Warning / Liability
 
-> Warning: The creator of this repo is not responsible if your machine ends up in a state you are not happy with. If you are concerned, look at the code to review everything this will do to your machine :)
+> Warning: The creator of this repository is not responsible if your machine ends up in a state you are not happy with. If you are concerned, look at the code to review everything this will do to your machine :)

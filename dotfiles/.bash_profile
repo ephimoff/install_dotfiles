@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra} ; do
+    # shellcheck disable=SC1090
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -27,7 +27,8 @@ fi
 
 # If possible, add tab completion for many more commands
 if [[ -f $(brew --prefix)/etc/bash_completion ]] ; then
-    source $(brew --prefix)/etc/bash_completion
+    # shellcheck disable=SC1090
+    source "$(brew --prefix)/etc/bash_completion"
 fi
 
 # ruby env
@@ -46,7 +47,7 @@ fi
 
 # aws tab completion
 if [[ -f $(which -s aws_completer) ]] ; then
-    complete -C $(which aws_completer) aws
+    complete -C "$(which aws_completer) aws"
 fi
 # Path to the bash it configuration
 export BASH_IT="/Users/antone/.bash_it"
@@ -97,4 +98,5 @@ export SCM_CHECK=true
 # export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
 # Load Bash It
+# shellcheck disable=SC1090
 source "$BASH_IT"/bash_it.sh

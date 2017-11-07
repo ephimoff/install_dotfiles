@@ -70,7 +70,3 @@ alias c="tr -d '\n' | pbcopy"
 alias rdep="rgrav deploy -R unison_frontend:0 -R unison_backend:0 -R unison_haproxy:0 -R connect:0 -p ec2"
 alias rinv="rgrav invoke -p ec2"
 
-# hugo
-alias hugodev="rm -rf dev & hugo -wD server -d dev" # build a web site with drafts included, watch them and put them into the dev
-
-
