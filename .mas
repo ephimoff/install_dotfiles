@@ -19,6 +19,8 @@ APPS=(
   823766827 # OneDrive
   409201541 # Pages
   775737590 # iA Writer
+  407963104 # Pixelmator
+  585829637 # Todoist
 )
 running "Installing mas apps"
 mas install "${APPS[@]}"

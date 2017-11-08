@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/Users/antone/.oh-my-zsh
+export ZSH=/Users/antone/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -45,8 +45,8 @@ export PATH="$HOME/Projects/scripts:$PATH"
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # go
-export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-export GOPATH="$HOME/go"
+# export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+# export GOPATH="$HOME/go"
 
 # packer
 # export PATH="$PATH:/usr/local/packer"

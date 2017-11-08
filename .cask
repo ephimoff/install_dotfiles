@@ -32,8 +32,11 @@ apps=(
     flycut
     font-fira-code
     font-source-code-pro
+    grammarly
     iterm2
+    intellij-idea-ce
     java
+    punto-switcher
     spectacle
     virtualbox
     virtualbox-extension-pack
