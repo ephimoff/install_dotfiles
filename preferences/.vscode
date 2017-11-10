@@ -9,16 +9,18 @@ source "${HOME}/Projects/dotfiles/bin/echos.sh"
 settingsSource=$HOME/Projects/dotfiles/applications/vscode/settings.json
 keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
 vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
-vsSnippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets/
-vsExtensionsSource=$HOME/Projects/dotfiles/applications/vscode/extensions/
+projectsSource=$HOME/Projects/dotfiles/applications/vscode/projects.json
+snippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets/
+extensionsSource=$HOME/Projects/dotfiles/applications/vscode/extensions/
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
 settingsTarget=$vsCodeUser/settings.json
 keybindingsTarget=$vsCodeUser/keybindings.json
 vsiconsTarget=$vsCodeUser/vsicons.settings.json
-vsSnippetsTarget=$vsCodeUser/snippets/
-vsExtensionsTarget=$vsCodeUser/extensions/
+projectsTarget=$vsCodeUser/projects.json
+snippetsTarget=$vsCodeUser/snippets/
+extensionsTarget=$vsCodeUser/extensions/
 
 # running "VS Code: Making the required directories if they don't exist"
 # [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
@@ -47,20 +49,29 @@ fi
 ok
 
 running "VS Code: Linking snippets"
-if [[ -f "$vsSnippetsSource" ]] ; then
+if [[ -f "$snippetsSource" ]] ; then
     running "VS Code: Remove snippets directory if already exists"
-    [[ -d "$vsSnippetsTarget" ]] && rm -rf "$vsSnippetsTarget"
+    [[ -d "$snippetsTarget" ]] && rm -rf "$snippetsTarget"
     ok
-    ln -s "$vsSnippetsSource" "$vsSnippetsTarget"
+    ln -s "$snippetsSource" "$snippetsTarget"
+fi
+ok
+
+running "VS Code: Linking porjects list from the Projects extension"
+if [[ -f "$projectsSource" ]] ; then
+    running "VS Code: Remove snippets directory if already exists"
+    [[ -d "$projectsTarget" ]] && rm -rf "$projectsTarget"
+    ok
+    ln -s "$projectsSource" "$projectsTarget"
 fi
 ok
 
 running "VS Code: Linking extensions"
-if [[ -f "$vsExtensionsSource" ]] ; then
+if [[ -f "$extensionsSource" ]] ; then
     running "VS Code: Remove extensions directory if already exists"
-    [[ -d "$vsExtensionsTarget" ]] && rm -rf "$vsExtensionsTarget"
+    [[ -d "$extensionsTarget" ]] && rm -rf "$extensionsTarget"
     ok
-    ln -s "$vsExtensionsSource" "$vsExtensionsTarget"
+    ln -s "$extensionsSource" "$extensionsTarget"
 fi
 ok
 
