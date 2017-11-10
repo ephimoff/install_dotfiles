@@ -3,20 +3,22 @@
 ###############################################################################
 # Visual Studio Code
 ###############################################################################
-# shellcheck disable=SC1091
-source ./bin/echos.sh
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 settingsSource=$HOME/Projects/dotfiles/applications/vscode/settings.json
 keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
 vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
-vsSnippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets
+vsSnippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets/
+vsExtensionsSource=$HOME/Projects/dotfiles/applications/vscode/extensions/
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
 settingsTarget=$vsCodeUser/settings.json
 keybindingsTarget=$vsCodeUser/keybindings.json
 vsiconsTarget=$vsCodeUser/vsicons.settings.json
-vsSnippetsTarget=$vsCodeUser/snippets
+vsSnippetsTarget=$vsCodeUser/snippets/
+vsExtensionsTarget=$vsCodeUser/extensions/
 
 # running "VS Code: Making the required directories if they don't exist"
 # [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
@@ -46,30 +48,30 @@ ok
 
 running "VS Code: Linking snippets"
 if [[ -f "$vsSnippetsSource" ]] ; then
-
+    running "VS Code: Remove snippets directory if already exists"
+    [[ -d "$vsSnippetsTarget" ]] && rm -rf "$vsSnippetsTarget"
+    ok
     ln -s "$vsSnippetsSource" "$vsSnippetsTarget"
 fi
 ok
 
-running "VS Code: Installing extensions"
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension DotJoshJohnson.xml
-code --install-extension PKief.material-icon-theme
-code --install-extension PeterJausovec.vscode-docker
-code --install-extension annsk.alignment
-code --install-extension bbenoist.vagrant
-code --install-extension casian.plsql
-code --install-extension dbankier.vscode-instant-markdown
-code --install-extension donjayamanne.githistory
-code --install-extension donjayamanne.python
-code --install-extension emilast.LogFileHighlighter
-code --install-extension hoovercj.ruby-linter
-code --install-extension misogi.ruby-rubocop
-code --install-extension mohsen1.prettify-json
-code --install-extension rebornix.Ruby
-code --install-extension redhat.java
-code --install-extension stevejpurves.cucumber
-code --install-extension timonwong.shellcheck
-code --install-extension tonsky.theme-alabaster
-code --install-extension wmaurer.change-case
+running "VS Code: Linking extensions"
+if [[ -f "$vsExtensionsSource" ]] ; then
+    running "VS Code: Remove extensions directory if already exists"
+    [[ -d "$vsExtensionsTarget" ]] && rm -rf "$vsExtensionsTarget"
+    ok
+    ln -s "$vsExtensionsSource" "$vsExtensionsTarget"
+fi
 ok
+
+# running "VS Code: Installing extensions"
+# code --install-extension DavidAnson.vscode-markdownlint
+# code --install-extension PKief.material-icon-theme
+# code --install-extension annsk.alignment
+# code --install-extension casian.plsql
+# code --install-extension emilast.LogFileHighlighter
+# code --install-extension timonwong.shellcheck
+# code --install-extension tonsky.theme-alabaster
+# code --install-extension eamodio.gitlens
+# code --install-extension ajhyndman.jslint
+# ok

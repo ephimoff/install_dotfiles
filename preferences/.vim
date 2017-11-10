@@ -3,8 +3,8 @@
 ###############################################################################
 # vim
 ###############################################################################
-# shellcheck disable=SC1091
-source ./bin/echos.sh
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 vim=$(which vim)
 running "VIM: Installing plugins"

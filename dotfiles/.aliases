@@ -47,10 +47,6 @@ alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 
-# DNS
-# alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
-# alias dnsflush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-# alias dns="scutil --dns"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -59,9 +55,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; s
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; gem update; gem cleanup; npm update'
-
-# Recursively delete `.DS_Store` files and Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias cleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder && find . -type f -name '*.DS_Store' -ls -delete"
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # include colorized echo
-# shellcheck disable=SC1091
-source ./bin/echos.sh
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 bot "Hi! I'm going to install tooling and tweak your system settings."
 bot "During the installation you might need to type the system password several times."

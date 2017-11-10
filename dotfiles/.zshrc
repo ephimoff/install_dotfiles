@@ -54,6 +54,9 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 # pager
 export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Add all known keys to the SSH agent
 ssh-add -A 2>/dev/null;
 
@@ -67,7 +70,7 @@ ssh-add ~/.ssh/gitlab_id_rsa &> /dev/null;
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 # shellcheck disable=SC1090
-source "$ZSH_CUSTOM/.aliases"
+source "$HOME/Projects/dotfiles/dotfiles/.aliases"
 
 # To retain the / added after completing directories or symbolic links to directories
 setopt no_auto_remove_slash

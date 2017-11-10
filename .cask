@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1091
-source ./bin/echos.sh
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
+
 # Start
 bot "Starting $(basename "$0")"
 
@@ -26,14 +27,10 @@ ok
 # Install packages
 apps=(
     caffeine
-    docker
-    dropbox
     firefox
     flycut
     font-fira-code
     font-source-code-pro
-    grammarly
-    iterm2
     intellij-idea-ce
     java
     punto-switcher
@@ -50,10 +47,9 @@ brew cask install  --require-sha "${apps[@]}"
 ok
 
 running "Installing apps that don't have checksum 256 defined..."
-brew cask install font-source-code-pro-for-powerline
+brew cask install dropbox
+brew cask install grammarly
 brew cask install google-chrome    
-brew cask install google-drive
-brew cask install joinme
 brew cask install skype
 brew cask install spotify
 ok

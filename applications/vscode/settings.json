@@ -25,10 +25,13 @@
 "material-icon-theme.showUpdateMessage": false,
 "workbench.colorTheme": "Alabaster",
 
+// Terminal
 // Customizes which terminal application to run on OS X.
-"terminal.external.osxExec": "iTerm.app",
+// "terminal.external.osxExec": "iTerm.app",
+// The path of the shell that the terminal uses on OS X.
+"terminal.integrated.shell.osx": "/bin/zsh",
  // Controls whether font ligatures are enabled in the terminal.
-"terminal.integrated.fontLigatures": true,
+// "terminal.integrated.fontLigatures": true,
 "files.associations": {
     "*.mustache": "html",
     "*.nunjucks": "html"

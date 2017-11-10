@@ -126,53 +126,45 @@ Updates Homebrew and installs the following packages:
 * `vim --with-custom-python`
 * `zsh`
 
-### .mas
-
-Install Mac App Store apps:
-
-* The Unarchiver
-* 1Password
-* OneDrive
-* Pages
-* iA Writer
-
 ### .cask
 
 Install Cask and the following packages apps and fonts:
 
 * `caffeine`
-* `docker`
 * `dropbox`
 * `firefox`
 * `flycut`
 * `font-fira-code`
 * `font-source-code-pro`
-* `font-source-code-pro-for-powerline`
 * `google-chrome`
-* `google-drive`
-* `iterm2`
+* `grammarly`
 * `java`
-* `joinme`
+* `qlstephen`
 * `skype`
 * `spectacle`
 * `spotify`
 * `transmission`
-* `virtualbox`
 * `virtualbox-extension-pack`
+* `virtualbox`
 * `visual-studio-code`
 * `vlc`
-* `qlstephen`
+
+### .mas
+
+Install Mac App Store apps:
+
+* 1Password
+* iA Writer
+* Pixelmator
+* The Unarchiver
+* Todoist
 
 ### .preferences
 
 Updates preferences for the following apps:
 
-* joinMe
-* python
 * ruby
-* Skype
 * ssh
-* Vagrant
 * vim
 * Visual Studio Code
 
