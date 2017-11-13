@@ -33,13 +33,13 @@ apps=(
     font-source-code-pro
     intellij-idea-ce
     java
-    punto-switcher
+    notion
+    qlstephen # Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
     spectacle
     virtualbox
     virtualbox-extension-pack
     visual-studio-code
     vlc
-    qlstephen # Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
 )
 
 running "Installing apps... "
@@ -48,8 +48,9 @@ ok
 
 running "Installing apps that don't have checksum 256 defined..."
 brew cask install dropbox
-brew cask install grammarly
 brew cask install google-chrome    
+brew cask install grammarly
+brew cask install punto-switcher
 brew cask install skype
 brew cask install spotify
 ok
