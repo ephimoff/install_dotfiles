@@ -4,5 +4,11 @@
 		"rootPath": "$home/Projects/dotfiles",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "notes",
+		"rootPath": "$home/Projects/notes",
+		"paths": [],
+		"group": ""
 	}
 ]
