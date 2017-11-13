@@ -12,12 +12,9 @@ Host *
     TCPKeepAlive yes
     ServerAliveInterval 60
     ControlMaster auto
-    ControlPath /tmp/%C
+    ControlPath ~/.ssh/%C
     ControlPersist 30
     ConnectTimeout 5
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/id_rsa
 
 Host github.com
     HostName ssh.github.com
@@ -32,7 +29,7 @@ Host gitlab.com
     User git
     PasswordAuthentication no
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/gitlab_id_rsa
+    IdentityFile ~/.ssh/id_rsa
 
 Host 192.168.*.* *.local localhost
     UserKnownHostsFile /dev/null

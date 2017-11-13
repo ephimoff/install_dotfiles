@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# include colorized echo
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
+
+# Start
+bot "Starting $(basename "$0")"
+
+###############################################################################
+# Safari & WebKit
+###############################################################################
+
+running "Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+ok
+
+running "Safari: Disable Safari’s thumbnail cache for History and Top Sites"
+defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+ok
+
+running "Safari: Enable Safari’s debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+ok
+
+running "Safari: Stop Safari sending searches to Apple"
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+ok

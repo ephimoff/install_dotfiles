@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# include colorized echo
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
+
+# Start
+bot "Starting $(basename "$0")"
+
+###############################################################################
+# Screen
+###############################################################################
+
+running "Screen: Require password immediately after sleep or screen saver begins"
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+ok
+
+running "Screen: Save screenshots to the Pictures directory"
+defaults write com.apple.screencapture location -string "${HOME}/Pictures"
+ok
+
+running "Screen: Save screenshots in PNG format"
+defaults write com.apple.screencapture type -string "png"
+ok # (other options: BMP, GIF, JPG, PDF, TIFF)
+
+running "Screen: Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
+ok
