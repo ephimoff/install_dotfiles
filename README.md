@@ -126,6 +126,7 @@ Updates Homebrew and installs the following packages:
 * `jq`
 * `rbenv ruby-build`
 * `rbenv`
+* `node`
 * `pyenv`
 * `shellcheck`
 * `vim --with-custom-python`

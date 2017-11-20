@@ -29,6 +29,7 @@ brew install bash
 brew install bash-completion
 brew install git
 brew install jq
+brew install node
 brew install pyenv
 brew install rbenv
 brew install rbenv ruby-build
