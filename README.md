@@ -119,15 +119,15 @@ Create a symlink to the scripts
 
 ### `.dotfiles`
 
-* Backs up the current dotfiles to `~/.dotfiles_backup`
-* Sets up aliases, shell variables and paths, creates useful functions
-* Sets up GIT config (i.e. GIT message, GIT ignore etc.)
-* Adds `.zshrc` configuration
+- Backs up the current dotfiles to `~/.dotfiles_backup`
+- Sets up aliases, shell variables and paths, creates useful functions
+- Sets up GIT config (i.e. GIT message, GIT ignore etc.)
+- Adds `.zshrc` configuration
 
 ### `.templates`
 
-* Sets up GIT credentials
-* Adds more paths
+- Sets up GIT credentials
+- Adds more paths
 
 ### `.macos`
 
@@ -137,68 +137,68 @@ Sets up macOS settings. See the output to find out what are the settings.
 
 Updates Homebrew and installs the following packages:
 
-* `ack`
-* `ansible`
-* `bash-completion`
-* `bash`
-* `git`
-* `jq`
-* `rbenv ruby-build`
-* `rbenv`
-* `node`
-* `pyenv`
-* `shellcheck`
-* `vim --with-custom-python`
-* `zsh`
+- `ack`
+- `ansible`
+- `bash-completion`
+- `bash`
+- `git`
+- `jq`
+- `rbenv ruby-build`
+- `rbenv`
+- `node`
+- `pyenv`
+- `shellcheck`
+- `vim --with-custom-python`
+- `zsh`
 
 ### `.cask`
 
 Install Cask and the following packages apps and fonts:
 
-* `dropbox`
-* `firefox`
-* `font-fira-code`
-* `font-source-code-pro`
-* `google-chrome`
-* `java`
-* `qlstephen`
-* `skype`
-* `virtualbox-extension-pack`
-* `virtualbox`
-* `visual-studio-code`
-* `vlc`
+- `dropbox`
+- `firefox`
+- `font-fira-code`
+- `font-source-code-pro`
+- `google-chrome`
+- `java`
+- `qlstephen`
+- `skype`
+- `virtualbox-extension-pack`
+- `virtualbox`
+- `visual-studio-code`
+- `vlc`
 
 ### `.additional_apps`
 
 This is completely optional. Just a list of apps that I usually install:
 
-* `caffeine`
-* `flycut`
-* `grammarly`
-* `notion`
-* `numi`
-* `punto-switcher`
-* `spectacle`
-* `spotify`
+- `caffeine`
+- `flycut`
+- `grammarly`
+- `notion`
+- `numi`
+- `punto-switcher`
+- `spectacle`
+- `spotify`
 
 ### `.mas`
 
 Install Mac App Store apps:
 
-* 1Password
-* iA Writer
-* Pixelmator
-* The Unarchiver
-* Todoist
+- 1Password
+- iA Writer
+- Pixelmator
+- The Unarchiver
+- Todoist
 
 ### `.preferences`
 
 Updates preferences for the following apps:
 
-* ruby
-* ssh
-* vim
-* Visual Studio Code
+- ruby
+- ssh
+- vim
+- Visual Studio Code
 
 ### `.oh_my_zsh`
 
@@ -210,9 +210,9 @@ Suggestions/improvements [welcome](https://github.com/ephimoff/dotfiles/issues)!
 
 ## Acknowedgements
 
-* [Mathias Bynens](https://github.com/mathiasbynens)
-* [Craig Hurley](https://github.com/craighurley/dotfiles)
-* [atomantic](https://github.com/atomantic/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens)
+- [Craig Hurley](https://github.com/craighurley/dotfiles)
+- [atomantic](https://github.com/atomantic/dotfiles)
 
 ## Warning / Liability
 
