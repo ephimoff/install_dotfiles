@@ -69,6 +69,11 @@ A collection of scripts to bootstrap a clean install of macOS.
     # Install oh_my_zsh.
     ~/Projects/dotfiles/.oh_my_zsh
     ```
+1. Install additional applications if you want:
+
+    ```sh
+    ~/Projects/dotfiles/.additional_apps
+    ```
 
 1. Restart your computer.
 
@@ -83,7 +88,7 @@ git pull origin master
 
 ## What's included
 
-### .directories
+### `.directories`
 
 Creates 3 folders:
 
@@ -93,23 +98,23 @@ Creates 3 folders:
 
 Create a symlink to the scripts
 
-### .dotfiles
+### `.dotfiles`
 
 * Backs up the current dotfiles to `~/.dotfiles_backup`
 * Sets up aliases, shell variables and paths, creates useful functions
 * Sets up GIT config (i.e. GIT message, GIT ignore etc.)
 * Adds `.zshrc` configuration
 
-### .templates
+### `.templates`
 
 * Sets up GIT credentials
 * Adds more paths
 
-### .macos
+### `.macos`
 
 Sets up macOS settings. See the output to find out what are the settings.
 
-### .brew
+### `.brew`
 
 Updates Homebrew and installs the following packages:
 
@@ -126,30 +131,37 @@ Updates Homebrew and installs the following packages:
 * `vim --with-custom-python`
 * `zsh`
 
-### .cask
+### `.cask`
 
 Install Cask and the following packages apps and fonts:
 
-* `caffeine`
 * `dropbox`
 * `firefox`
-* `flycut`
 * `font-fira-code`
 * `font-source-code-pro`
 * `google-chrome`
-* `grammarly`
 * `java`
 * `qlstephen`
 * `skype`
-* `spectacle`
-* `spotify`
-* `transmission`
 * `virtualbox-extension-pack`
 * `virtualbox`
 * `visual-studio-code`
 * `vlc`
 
-### .mas
+### `.additional_apps`
+
+This is completely optional. Just a list of apps that I usually install:
+
+* `caffeine`
+* `flycut`
+* `grammarly`
+* `notion`
+* `numi`
+* `punto-switcher`
+* `spectacle`
+* `spotify`
+
+### `.mas`
 
 Install Mac App Store apps:
 
@@ -159,7 +171,7 @@ Install Mac App Store apps:
 * The Unarchiver
 * Todoist
 
-### .preferences
+### `.preferences`
 
 Updates preferences for the following apps:
 
@@ -168,7 +180,7 @@ Updates preferences for the following apps:
 * vim
 * Visual Studio Code
 
-### .oh_my_zsh
+### `.oh_my_zsh`
 
 Installs [oh_my_zsh](http://ohmyz.sh) shell
 
