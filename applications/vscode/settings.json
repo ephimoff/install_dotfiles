@@ -17,6 +17,8 @@
     },
     // Sets how line-breaks are rendered in the markdown preview. Setting it to 'true' creates a <br> for every newline.
     "markdown.preview.breaks": true,
+    // Markdown TOC
+    "markdown-toc.depthFrom":2,
 
 "workbench.commandPalette.preserveInput":true,
 "git.confirmSync": false,

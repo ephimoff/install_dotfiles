@@ -10,5 +10,17 @@
 		"rootPath": "$home/Projects/notes",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "vscode-presentation",
+		"rootPath": "$home/Projects/presentations/vscode",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "travel-checklist",
+		"rootPath": "$home/Projects/travel-checklist",
+		"paths": [],
+		"group": ""
 	}
 ]
