@@ -2,9 +2,28 @@
 
 [![Build Status](https://travis-ci.org/ephimoff/dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/dotfiles)
 
-## Introduction
-
 A collection of scripts to bootstrap a clean install of macOS.
+
+<!-- TOC -->
+
+- [Installation](#installation)
+- [Update](#update)
+- [What's included](#whats-included)
+    - [`.directories`](#directories)
+    - [`.dotfiles`](#dotfiles)
+    - [`.templates`](#templates)
+    - [`.macos`](#macos)
+    - [`.brew`](#brew)
+    - [`.cask`](#cask)
+    - [`.additional_apps`](#additional_apps)
+    - [`.mas`](#mas)
+    - [`.preferences`](#preferences)
+    - [`.oh_my_zsh`](#oh_my_zsh)
+- [Feedback](#feedback)
+- [Acknowedgements](#acknowedgements)
+- [Warning / Liability](#warning--liability)
+
+<!-- /TOC -->
 
 ## Installation
 
