@@ -11,7 +11,7 @@ keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
 vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
 projectsSource=$HOME/Projects/dotfiles/applications/vscode/projects.json
 snippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets/
-extensionsSource=$HOME/Projects/dotfiles/applications/vscode/extensions/
+# extensionsSource=$HOME/Projects/dotfiles/applications/vscode/extensions/
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
@@ -20,7 +20,7 @@ keybindingsTarget=$vsCodeUser/keybindings.json
 vsiconsTarget=$vsCodeUser/vsicons.settings.json
 projectsTarget=$vsCodeUser/projects.json
 snippetsTarget=$vsCodeUser/snippets/
-extensionsTarget=$vsCodeUser/extensions/
+# extensionsTarget=$vsCodeUser/extensions/
 
 # running "VS Code: Making the required directories if they don't exist"
 # [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
@@ -57,6 +57,31 @@ if [[ -f "$snippetsSource" ]] ; then
 fi
 ok
 
+
+
+# running "VS Code: Linking extensions"
+# if [[ -f "$extensionsSource" ]] ; then
+#     running "VS Code: Remove extensions directory if already exists"
+#     [[ -d "$extensionsTarget" ]] && rm -rf "$extensionsTarget"
+#     ok
+#     ln -s "$extensionsSource" "$extensionsTarget"
+# fi
+# ok
+
+running "VS Code: Installing extensions"
+code --install-extension AlanWalk.markdown-toc
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension PKief.material-icon-theme
+code --install-extension alefragnani.project-manager
+code --install-extension annsk.alignment
+code --install-extension casian.plsql
+code --install-extension dbaeumer.jshint
+code --install-extension eamodio.gitlens
+code --install-extension emilast.LogFileHighlighter
+code --install-extension timonwong.shellcheck
+code --install-extension tonsky.theme-alabaster
+ok
+
 running "VS Code: Linking porjects list from the Projects extension"
 if [[ -f "$projectsSource" ]] ; then
     running "VS Code: Remove snippets directory if already exists"
@@ -65,24 +90,3 @@ if [[ -f "$projectsSource" ]] ; then
     ln -s "$projectsSource" "$projectsTarget"
 fi
 ok
-
-running "VS Code: Linking extensions"
-if [[ -f "$extensionsSource" ]] ; then
-    running "VS Code: Remove extensions directory if already exists"
-    [[ -d "$extensionsTarget" ]] && rm -rf "$extensionsTarget"
-    ok
-    ln -s "$extensionsSource" "$extensionsTarget"
-fi
-ok
-
-# running "VS Code: Installing extensions"
-# code --install-extension DavidAnson.vscode-markdownlint
-# code --install-extension PKief.material-icon-theme
-# code --install-extension annsk.alignment
-# code --install-extension casian.plsql
-# code --install-extension emilast.LogFileHighlighter
-# code --install-extension timonwong.shellcheck
-# code --install-extension tonsky.theme-alabaster
-# code --install-extension eamodio.gitlens
-# code --install-extension ajhyndman.jslint
-# ok

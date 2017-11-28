@@ -22,5 +22,11 @@
 		"rootPath": "$home/Projects/travel-checklist",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "pathway-library-presentation",
+		"rootPath": "$home/Projects/presentations/pathway-library",
+		"paths": [],
+		"group": ""
 	}
 ]
