@@ -28,5 +28,11 @@
 		"rootPath": "$home/Projects/presentations/pathway-library",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "gulp-boilerplate",
+		"rootPath": "$home/Projects/gulp-boilerplate",
+		"paths": [],
+		"group": ""
 	}
 ]
