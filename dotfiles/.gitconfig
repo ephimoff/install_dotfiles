@@ -100,3 +100,5 @@
 # [user]
 #     name = Anton Efimov
 #     email = anton.efimov@orionhealth.com
+[credential]
+	helper = osxkeychain

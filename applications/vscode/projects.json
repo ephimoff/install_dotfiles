@@ -34,5 +34,11 @@
 		"rootPath": "$home/Projects/gulp-boilerplate",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "style-guides",
+		"rootPath": "$home/Projects/guides",
+		"paths": [],
+		"group": ""
 	}
 ]

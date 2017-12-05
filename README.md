@@ -88,6 +88,7 @@ A collection of scripts to bootstrap a clean install of macOS.
     # Install oh_my_zsh.
     ~/Projects/dotfiles/.oh_my_zsh
     ```
+
 1. Install additional applications if you want:
 
     ```sh
