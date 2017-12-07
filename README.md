@@ -199,7 +199,9 @@ Updates preferences for the following apps:
 - ruby
 - ssh
 - vim
+- Mac OS apps (Terminal, Messages, Safari, Finder etc.)
 - Visual Studio Code
+- Spectacle
 
 ### `.oh_my_zsh`
 
