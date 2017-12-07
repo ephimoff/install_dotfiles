@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Spectacle.app
+###############################################################################
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
+
+shortcutsSource=$HOME/Projects/dotfiles/applications/spectacle/Shortcuts.json
+
+
+
+shortcutsTarget=$HOME/Library/Application\ Support/Spectacle/Shortcuts.json
+
+
+
+running "Spectacle: Linking config file"
+if [[ -f "$shortcutsSource" ]] ; then
+    running "Spectacle: Remove shortcuts files if already exists"
+    [[ -f "$shortcutsTarget" ]] && rm -rf "$shortcutsTarget"
+    ok
+    ln -f -s "$shortcutsSource" "$shortcutsTarget"
+fi
+ok

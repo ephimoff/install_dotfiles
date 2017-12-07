@@ -14,3 +14,7 @@ running "Terminal: Make Light theme the default one"
 defaults write com.apple.terminal 'Default Window Settings' -string Light_theme
 defaults write com.apple.terminal 'Startup Window Settings' -string Light_theme
 ok
+
+running "Terminal: Disable the annoying line marks"
+defaults write com.apple.Terminal ShowLineMarks -int 0
+ok

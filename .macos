@@ -90,5 +90,15 @@ defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 ok
 
+
+###############################################################################
+# Messages
+###############################################################################
+
+running "Messages: Disable continuous spell checking"
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+ok
+
 # Finished
 bot "$(basename "$0") complete."
+
