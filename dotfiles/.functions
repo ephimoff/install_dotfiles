@@ -1,0 +1,6 @@
+# create a directory and open it straight away
+mcd ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}

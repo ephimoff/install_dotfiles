@@ -44,9 +44,6 @@ export PATH="$HOME/Projects/scripts:$PATH"
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
-# go
-# export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-# export GOPATH="$HOME/go"
 
 # packer
 # export PATH="$PATH:/usr/local/packer"
@@ -68,7 +65,12 @@ ssh-add -A 2>/dev/null;
 # shellcheck disable=SC1090
 source "$HOME/Projects/dotfiles/dotfiles/.aliases"
 
+# Load functions
+# shellcheck disable=SC1090
+source "$HOME/Projects/dotfiles/dotfiles/.functions"
+
 # To retain the / added after completing directories or symbolic links to directories
 setopt no_auto_remove_slash
 
+# shellcheck disable=SC2206
 fpath=(/usr/local/share/zsh-completions $fpath)

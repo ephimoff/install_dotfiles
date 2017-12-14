@@ -55,6 +55,7 @@
     "suppressNoRepositoryWarning": false,
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
-}
+},
+"explorer.confirmDragAndDrop": false
 }
 

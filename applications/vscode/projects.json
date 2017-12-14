@@ -40,5 +40,11 @@
 		"rootPath": "$home/Projects/guides",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "mac-dev-tools",
+		"rootPath": "$home/Projects/mac-dev-tools",
+		"paths": [],
+		"group": ""
 	}
 ]
