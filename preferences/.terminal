@@ -10,7 +10,7 @@ running "Terminal: Open Light theme"
 open "${HOME}/Projects/dotfiles/applications/terminal/Snazzy.terminal"
 ok
 
-running "Terminal: Make Light theme the default one"
+running "Terminal: Make Snazzy theme the default one"
 defaults write com.apple.terminal 'Default Window Settings' -string Snazzy
 defaults write com.apple.terminal 'Startup Window Settings' -string Snazzy
 ok

@@ -35,6 +35,7 @@ brew install rbenv
 brew install rbenv ruby-build
 brew install rbenv-bundler
 brew install shellcheck
+brew install tldr
 brew install vim --with-custom-python
 brew install zsh
 ok

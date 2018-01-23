@@ -46,5 +46,11 @@
 		"rootPath": "$home/Projects/mac-dev-tools",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "solution_unison",
+		"rootPath": "$home/Projects/solutions/solution_unison",
+		"paths": [],
+		"group": ""
 	}
 ]

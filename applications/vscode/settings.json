@@ -2,7 +2,7 @@
 {
     // Adding Fira Code font
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "editor.fontLigatures": true,
 
     // Markdown linter rules
@@ -28,12 +28,13 @@
 "workbench.colorTheme": "Alabaster",
 
 // Terminal
-// Customizes which terminal application to run on OS X.
-// "terminal.external.osxExec": "iTerm.app",
 // The path of the shell that the terminal uses on OS X.
-"terminal.integrated.shell.osx": "/bin/zsh",
+// "terminal.integrated.shell.osx": "/bin/zsh",
  // Controls whether font ligatures are enabled in the terminal.
 // "terminal.integrated.fontLigatures": true,
+"terminal.integrated.cursorStyle": "line",
+"terminal.integrated.cursorBlinking": true,
+
 "files.associations": {
     "*.mustache": "html",
     "*.nunjucks": "html"
@@ -56,6 +57,7 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
 },
-"explorer.confirmDragAndDrop": false
+"explorer.confirmDragAndDrop": false,
+"git.autofetch": true
 }
 

@@ -45,6 +45,7 @@ brew cask install  --require-sha "${apps[@]}"
 ok
 
 running "Installing apps that don't have checksum 256 defined..."
+brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install skype
