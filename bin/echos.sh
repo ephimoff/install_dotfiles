@@ -6,7 +6,7 @@
 ###
 
 # Colours
-ESC_SEQ="\x1b["
+ESC_SEQ="\\x1b["
 COL_RESET=$ESC_SEQ"39;49;00m"
 COL_RED=$ESC_SEQ"31;01m"
 COL_GREEN=$ESC_SEQ"32;01m"
@@ -20,7 +20,7 @@ function ok() {
 }
 
 function bot() {
-    echo -e "\n$COL_GREEN\[._.]/$COL_RESET - $1"
+    echo -e "\\n$COL_GREEN\\[._.]/$COL_RESET - $1"
 }
 
 function running() {
@@ -28,7 +28,7 @@ function running() {
 }
 
 function action() {
-    echo -e "\n$COL_YELLOW[action]:$COL_RESET\n ⇒ $1..."
+    echo -e "\\n$COL_YELLOW[action]:$COL_RESET\\n ⇒ $1..."
 }
 
 function warn() {
