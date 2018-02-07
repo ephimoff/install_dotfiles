@@ -52,5 +52,11 @@
 		"rootPath": "$home/Projects/solutions/solution_unison",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "jira-cards-printing",
+		"rootPath": "$home/Projects/jira-cards-printing",
+		"paths": [],
+		"group": ""
 	}
 ]
