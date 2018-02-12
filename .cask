@@ -26,13 +26,14 @@ ok
 
 # Install packages
 apps=(
+    eclipse-ide
+    eclipse-java
     firefox
     font-fira-code
     font-source-code-pro
     intellij-idea-ce
     java
-    eclipse-ide
-    eclipse-java
+    karabiner-elements
     qlstephen # Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
     virtualbox
     virtualbox-extension-pack

@@ -8,11 +8,7 @@ source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 shortcutsSource=$HOME/Projects/dotfiles/applications/spectacle/Shortcuts.json
 
-
-
 shortcutsTarget=$HOME/Library/Application\ Support/Spectacle/Shortcuts.json
-
-
 
 running "Spectacle: Linking config file"
 if [[ -f "$shortcutsSource" ]] ; then
