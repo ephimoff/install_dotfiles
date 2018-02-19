@@ -26,6 +26,7 @@ ok
 
 # Install packages
 apps=(
+    bettertouchtool
     eclipse-ide
     eclipse-java
     firefox

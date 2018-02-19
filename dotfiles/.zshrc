@@ -38,8 +38,10 @@ export PATH="$HOME/Projects/rgrav:$PATH"
 # orion: graviton
 export PATH="$HOME/.usr/graviton-cli/bin:$PATH"
 
-# orion: graviton
 export PATH="$HOME/Projects/scripts:$PATH"
+
+# go
+# export PATH="/usr/local/go/bin:$PATH"
 
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
@@ -72,5 +74,4 @@ source "$HOME/Projects/dotfiles/dotfiles/.functions"
 # To retain the / added after completing directories or symbolic links to directories
 setopt no_auto_remove_slash
 
-# shellcheck disable=SC2206
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh-completions "$fpath")

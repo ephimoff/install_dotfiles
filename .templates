@@ -8,8 +8,7 @@ bot "Starting $(basename "$0")"
 directory=~/Projects/dotfiles/templates
 files=$(find $directory -iname ".*" -maxdepth 1 -type f)
 
-# shellcheck disable=SC2068
-for file in ${files[@]} ; do
+for file in "${files[@]}" ; do
     [[ ! -f "$HOME/$(basename "$file")" ]] && cp "$file" ~/
 done
 
