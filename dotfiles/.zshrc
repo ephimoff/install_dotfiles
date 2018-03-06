@@ -74,4 +74,5 @@ source "$HOME/Projects/dotfiles/dotfiles/.functions"
 # To retain the / added after completing directories or symbolic links to directories
 setopt no_auto_remove_slash
 
-fpath=(/usr/local/share/zsh-completions "$fpath")
+# shellcheck disable=SC2206
+fpath=(/usr/local/share/zsh-completions $fpath)

@@ -1,5 +1,7 @@
 # dotfiles
 
+![Logo of the project](./images/logo.png)
+
 [![Build Status](https://travis-ci.org/ephimoff/dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/dotfiles)
 
 A collection of scripts to bootstrap a clean install of macOS.

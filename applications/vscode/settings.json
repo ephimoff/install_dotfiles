@@ -58,6 +58,7 @@
     "suppressWelcomeNotice": true
 },
 "explorer.confirmDragAndDrop": false,
-"git.autofetch": true
+"git.autofetch": true,
+"gitlens.explorers.avatars": false
 }
 
