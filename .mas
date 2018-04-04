@@ -19,7 +19,6 @@ APPS=(
   443987910 # 1Password
   775737590 # iA Writer
   407963104 # Pixelmator
-  585829637 # Todoist
 )
 running "Installing mas apps"
 mas install "${APPS[@]}"

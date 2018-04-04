@@ -58,5 +58,11 @@
 		"rootPath": "$home/Projects/jira-cards-printing",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "synopsis",
+		"rootPath": "$home/Projects/cronos/synopsis",
+		"paths": [],
+		"group": ""
 	}
 ]

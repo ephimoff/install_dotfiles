@@ -28,10 +28,6 @@
 "workbench.colorTheme": "Alabaster",
 
 // Terminal
-// The path of the shell that the terminal uses on OS X.
-// "terminal.integrated.shell.osx": "/bin/zsh",
- // Controls whether font ligatures are enabled in the terminal.
-// "terminal.integrated.fontLigatures": true,
 "terminal.integrated.cursorStyle": "line",
 "terminal.integrated.cursorBlinking": true,
 
@@ -47,6 +43,7 @@
     "esversion":6,
     "multistr": true
 },
+"explorer.confirmDragAndDrop": false,
 "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -54,11 +51,8 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
-    "suppressUpdateNotice": false,
-    "suppressWelcomeNotice": true
-},
-"explorer.confirmDragAndDrop": false,
-"git.autofetch": true,
-"gitlens.explorers.avatars": false
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+}
 }
 
