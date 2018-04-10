@@ -1,6 +1,6 @@
 [core]
     editor = vim
-	excludesfile = /Users/antone/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
     attributesfile = ~/.gitattributes
     pager = cat
 
