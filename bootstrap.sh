@@ -19,6 +19,7 @@ $directory/.macos
 $directory/.brew
 $directory/.cask
 $directory/.mas
+$directory/.additional_apps
 $directory/.preferences
 $directory/.oh_my_zsh
 

@@ -39,7 +39,6 @@ apps=(
     virtualbox
     virtualbox-extension-pack
     visual-studio-code
-    vlc
 )
 
 running "Installing apps... "

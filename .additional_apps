@@ -33,7 +33,6 @@ brew cask install notion         # https://www.notion.so
 brew cask install numi           # http://numi.io
 brew cask install punto-switcher # https://yandex.ru/soft/punto/
 brew cask install spectacle      # https://www.spectacleapp.com
-brew cask install spotify        # https://www.spotify.com/
 ok
 
 running "Cleaning up unneeded files..."

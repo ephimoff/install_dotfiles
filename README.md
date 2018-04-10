@@ -169,11 +169,10 @@ Install Cask and the following packages apps and fonts:
 - `virtualbox-extension-pack`
 - `virtualbox`
 - `visual-studio-code`
-- `vlc`
 
 ### `.additional_apps`
 
-This is completely optional. Just a list of apps that I usually install:
+This is completely optional. Comment it out if you don't want it. Just a list of apps that I usually install:
 
 - `caffeine`
 - `flycut`
@@ -182,7 +181,6 @@ This is completely optional. Just a list of apps that I usually install:
 - `numi`
 - `punto-switcher`
 - `spectacle`
-- `spotify`
 
 ### `.mas`
 
@@ -192,7 +190,6 @@ Install Mac App Store apps:
 - iA Writer
 - Pixelmator
 - The Unarchiver
-- Todoist
 
 ### `.preferences`
 
