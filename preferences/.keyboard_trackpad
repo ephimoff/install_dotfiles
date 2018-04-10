@@ -4,10 +4,6 @@
 # shellcheck disable=SC1090
 source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
-# Start
-bot "Starting $(basename "$0")"
-
-
 ###############################################################################
 # Trackpad, keyboard
 ###############################################################################

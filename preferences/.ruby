@@ -4,14 +4,21 @@
 # ruby
 ###############################################################################
 
+# include colorized echo
+# shellcheck disable=SC1090
+source "${HOME}/Projects/dotfiles/bin/echos.sh"
+
+running "Ruby: Installing rbenv, ruby 2.0 and 2.2, making 2.2 a default one and installing gems: bundler, mdl, rubocop,yaml-lint"
+
 if [[ -f "/usr/local/bin/rbenv" ]] ; then
     eval "$(rbenv init -)"
 
     # install ruby versions
     rbenv install 2.0.0-p598
+    rbenv install 2.2.0
 
     # set the global version
-    rbenv global 2.0.0-p598
+    rbenv global 2.2.0
 
     # install gems
     rbenv exec gem install bundler
@@ -24,3 +31,4 @@ else
     echo "ERROR: rbenv is not available."
     exit 1
 fi
+ok

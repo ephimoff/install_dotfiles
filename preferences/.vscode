@@ -24,29 +24,31 @@ snippetsTarget=$vsCodeUser/snippets/
 # [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
 # ok
 
-running "VS Code: Linking config files"
+running "VS Code: Linking config files\\n"
+
 running "VS Code: Linking settings.json"
 if [[ -f "$settingsSource" ]] ; then
-
-    ln -f -s "$settingsSource" "$settingsTarget"
+    [[ -d "$settingsTarget" ]] && rm -rf "$settingsTarget"
+    ln -s "$settingsSource" "$settingsTarget"
 fi
 ok
+
 
 running "VS Code: Linking keybindings.json"
 if [[ -f "$keybindingsSource" ]] ; then
 
-    ln -f -s "$keybindingsSource" "$keybindingsTarget"
+    ln -s "$keybindingsSource" "$keybindingsTarget"
 fi
 ok
 
 running "VS Code: Linking icons"
 if [[ -f "$vsiconsSource" ]] ; then
 
-    ln -f -s "$vsiconsSource" "$vsiconsTarget"
+    ln -s "$vsiconsSource" "$vsiconsTarget"
 fi
 ok
 
-running "VS Code: Linking snippets"
+running "VS Code: Linking snippets\\n"
 if [[ -f "$snippetsSource" ]] ; then
     running "VS Code: Remove snippets directory if already exists"
     [[ -d "$snippetsTarget" ]] && rm -rf "$snippetsTarget"
@@ -74,11 +76,9 @@ running "VS Code: Installing jshint Node.js app (without it the extension won't 
 npm i -g jshint
 ok
 
-running "VS Code: Linking porjects list from the Projects extension"
+running "VS Code: Linking porjects list from the Projects extension\\n"
 if [[ -f "$projectsSource" ]] ; then
-    running "VS Code: Remove snippets directory if already exists"
     [[ -d "$projectsTarget" ]] && rm -rf "$projectsTarget"
-    ok
     ln -s "$projectsSource" "$projectsTarget"
 fi
 ok
