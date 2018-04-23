@@ -47,16 +47,8 @@ alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 
-# Empty the Trash on all mounted volumes and the main HDD
-# Also, clear Apple’s System Logs to improve shell startup speed
-# shellcheck disable=SC2139
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv $HOME/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew and their installed packages
 alias update='brew update; brew upgrade; brew cleanup; npm -g update'
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\\n' | pbcopy"
 
 
 # orion

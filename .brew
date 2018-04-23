@@ -23,6 +23,7 @@ ok
 running "Installing applications..."
 brew tap homebrew/completions
 
+brew install ant
 brew install ack
 brew install ansible
 brew install bash
@@ -32,7 +33,7 @@ brew install jq
 brew install node
 brew install pyenv
 brew install rbenv
-brew install rbenv ruby-build
+brew install ruby-build
 brew install rbenv-bundler
 brew install shellcheck
 brew install tldr

@@ -46,9 +46,8 @@ export PATH="$HOME/Projects/scripts:$PATH"
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
-
-# packer
-# export PATH="$PATH:/usr/local/packer"
+# scripts
+export PATH="$HOME/.scripts:$PATH"
 
 # pager
 export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"

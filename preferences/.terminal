@@ -11,8 +11,9 @@ open "${HOME}/Projects/dotfiles/applications/terminal/Snazzy.terminal"
 ok
 
 running "Terminal: Make Snazzy theme the default one"
-defaults write com.apple.terminal 'Default Window Settings' -string Snazzy
-defaults write com.apple.terminal 'Startup Window Settings' -string Snazzy
+defaults write com.apple.Terminal 'Default Window Settings' -string Snazzy
+ok
+defaults write com.apple.Terminal 'Startup Window Settings' -string Snazzy
 ok
 
 running "Terminal: Disable the annoying line marks"

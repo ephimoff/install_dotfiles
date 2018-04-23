@@ -13,15 +13,15 @@ bot "Here I go..."
 directory=~/Projects/dotfiles
 
 $directory/.directories
-$directory/.dotfiles
 $directory/.templates
 $directory/.macos
 $directory/.brew
 $directory/.cask
 $directory/.mas
 $directory/.additional_apps
-$directory/.preferences
 $directory/.oh_my_zsh
+$directory/.dotfiles
+$directory/.preferences
 
 # Finished
 bot "$(basename "$0") complete."
