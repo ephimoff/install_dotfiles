@@ -4,10 +4,6 @@
     attributesfile = ~/.gitattributes
     pager = cat
 
-[user]
-    #name = set GIT_COMMITTER_NAME and GIT_AUTHOR_NAME in ~/.extra
-    #email = set EMAIL in ~/.extra
-
 [commit]
     template = ~/.gitmessage
 
@@ -96,10 +92,6 @@
 
     # status
     st = status
-
-# [user]
-#     name = Anton Efimov
-#     email = anton.efimov@orionhealth.com
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
@@ -108,3 +100,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[user]
+	email = a.ephimoff@gmail.com
+	name = Anton Efimov

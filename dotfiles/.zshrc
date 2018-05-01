@@ -24,7 +24,7 @@ POWERLEVEL9K_TIME_FOREGROUND='grey'
 
 # plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # shellcheck disable=SC2034
-plugins=(git copydir z osx brew)
+plugins=(git copydir z osx brew docker)
 # shellcheck disable=SC1090
 source $ZSH/oh-my-zsh.sh
 
