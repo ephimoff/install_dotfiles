@@ -6,7 +6,7 @@
 # shellcheck disable=SC1090
 source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
-karabinerSource=$HOME/Projects/dotfiles/applications/karabiner/karabiner/
+karabinerSource=$HOME/Projects/dotfiles-min/applications/karabiner/karabiner/
 
 karabinerTarget=$HOME/.config/
 

@@ -7,7 +7,7 @@
 source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 running "Terminal: Open Light theme"
-open "${HOME}/Projects/dotfiles/applications/terminal/Snazzy.terminal"
+open "${HOME}/Projects/dotfiles-min/applications/terminal/Snazzy.terminal"
 ok
 
 running "Terminal: Make Snazzy theme the default one"

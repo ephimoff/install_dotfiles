@@ -6,7 +6,7 @@
 # shellcheck disable=SC1090
 source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
-shortcutsSource=$HOME/Projects/dotfiles/applications/spectacle/Shortcuts.json
+shortcutsSource=$HOME/Projects/dotfiles-min/applications/spectacle/Shortcuts.json
 
 shortcutsTarget=$HOME/Library/Application\ Support/Spectacle/Shortcuts.json
 
