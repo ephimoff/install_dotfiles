@@ -5,7 +5,15 @@ source "${HOME}/Projects/dotfiles/bin/echos.sh"
 # Start
 bot "Starting $(basename "$0")"
 
-directory=~/Projects/dotfiles/dotfiles
+dotfiles_repo="https://github.com/ephimoff/dotfiles-min.git"
+dotfiles_repo_dest="${HOME}/Projects/dotfiles-min"
+
+running "Clonning a dotfiles repository: $dotfiles_repo"
+git clone "$dotfiles_repo" "$dotfiles_repo_dest"
+ok
+
+
+directory="$dotfiles_repo_dest/dotfiles"
 backup=~/.dotfiles_backup
 files=$(find "$directory" -iname ".*" -maxdepth 1 -type f)
 
@@ -17,11 +25,13 @@ function doIt() {
     # shellcheck disable=SC2068
     for file in ${files[@]} ; do
         if [[ -f "$HOME/$(basename "$file")" ]] ; then
-            echo "Moving $HOME/$(basename "$file") to $backup"
+            running "Moving $HOME/$(basename "$file") to $backup"
             mv -n "$HOME/$(basename "$file")" "$backup"/
+            ok
         fi
-        echo "Symlinking $file to $HOME/$(basename "$file")"
+        running "Symlinking $file to $HOME/$(basename "$file")"
         ln -f -s "$file" "$HOME/$(basename "$file")"
+        ok
     done
 }
 
