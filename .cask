@@ -46,6 +46,10 @@ running "Installing apps... "
 brew cask install  --require-sha "${apps[@]}"
 ok
 
+running "Installing ant here because it has a dependency on java "
+brew install ant
+ok
+
 running "Installing apps that don't have checksum 256 defined..."
 brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install dropbox

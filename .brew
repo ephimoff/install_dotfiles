@@ -21,9 +21,11 @@ ok
 
 # install applications
 running "Installing applications..."
-brew tap homebrew/completions
+brew tap caskroom/versions
+brew tap homebrew/core
+brew tap caskroom/cask
+brew tap caskroom/fonts
 
-brew install ant
 brew install ack
 brew install ansible
 brew install bash
