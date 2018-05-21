@@ -29,40 +29,27 @@ A collection of scripts to bootstrap a clean install of macOS.
 
 ## Installation
 
-1. Install xcode from the app store.
-
-1. Open xcode and accept the license agreement.
-
-1. Install xcode command line tools:
-
-    ```sh
+1. [UPDATE: Hombrew now installs the XCode Command line tools for you] ~~~Install xcode from the app store.~~~
+1. ~~~Open xcode and accept the license agreement.~~~
+1.  ~~Install xcode command line tools:~~
+    ```
     xcode-select --install
     ```
-
-1. In order to get all apps from `.mas` installed you have to sign in to Apple Mac App Store first. Alternatively, you can comment out `$directory/.macos` in `bootstrap.sh`.
-
 1. Clone this repository by running the following commands:
-
-    ```sh
+    ```
     mkdir ~/Projects
     git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
     ```
-
 1. Install homebrew by running the following command:
-
-    ```sh
+    ```
     ~/Projects/dotfiles/.brew_install
     ```
-
 1. Run the following command to do everything.  _Note: you will be prompted for your password a number of times during script execution._
-
-    ```sh
+    ```
     ~/Projects/dotfiles/bootstrap.sh
     ```
-
     Essentially, `bootstrap.sh` executes the following commands:
-
-    ```sh
+    ```
     # Create useful directories.
     ~/Projects/dotfiles/.directories
 
@@ -81,29 +68,26 @@ A collection of scripts to bootstrap a clean install of macOS.
     # Install command line package manager and additional applications.
     ~/Projects/dotfiles/.cask
 
-    # Install MAS using Homebrew and apps from Mac App Store
-    ~/Projects/dotfiles/.mas
-
     # Apply preferences to applications.
     ~/Projects/dotfiles/.preferences
 
     # Install oh_my_zsh.
     ~/Projects/dotfiles/.oh_my_zsh
     ```
-
 1. Install additional applications if you want:
-
-    ```sh
+    ```
     ~/Projects/dotfiles/.additional_apps
     ```
-
+1. Install MAS apps by running the following command. Note: You have to sign in to Apple Mac App Store first.
+    ```
+    ~/Projects/dotfiles/.mas
+    ```
 1. Restart your computer.
 
 ## Update
 
 Run the following commands to get the latest version of this project:
-
-```sh
+```
 cd ~/Projects/dotfiles/
 git pull origin master
 ```
