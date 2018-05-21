@@ -19,13 +19,15 @@ running "Upgrading formulae..."
 brew upgrade
 ok
 
-# install applications
-running "Installing applications..."
+running "Setting up taps... "
 brew tap caskroom/versions
 brew tap homebrew/core
 brew tap caskroom/cask
 brew tap caskroom/fonts
+ok
 
+# install applications
+running "Installing applications..."
 brew install ack
 brew install ansible
 brew install bash
@@ -35,11 +37,10 @@ brew install jq
 brew install node
 brew install pyenv
 brew install rbenv
-brew install ruby-build
 brew install rbenv-bundler
 brew install shellcheck
 brew install tldr
-brew install vim --with-custom-python
+brew install vim
 brew install zsh
 ok
 
