@@ -29,12 +29,9 @@ A collection of scripts to bootstrap a clean install of macOS.
 
 ## Installation
 
-1. [UPDATE: Hombrew now installs the XCode Command line tools for you] ~~~Install xcode from the app store.~~~
-1. ~~~Open xcode and accept the license agreement.~~~
-1.  ~~Install xcode command line tools:~~
-    ```
-    xcode-select --install
-    ```
+1. [UPDATE: Hombrew now installs the XCode Command line tools for you] ~~Install xcode from the app store.~~
+1. ~~Open xcode and accept the license agreement.~~
+1. ~~Install xcode command line tools:~~
 1. Clone this repository by running the following commands:
     ```
     mkdir ~/Projects
@@ -55,9 +52,6 @@ A collection of scripts to bootstrap a clean install of macOS.
 
     # Backup existing dotfiles and symlink to the dotfiles in this project.
     ~/Projects/dotfiles/.dotfiles
-
-    # Copy templates to ~. These files don't really belong in version control, hence they are not symlinked.
-    ~/Projects/dotfiles/.templates
 
     # Configure sensible defaults in macOS.
     ~/Projects/dotfiles/.macos
