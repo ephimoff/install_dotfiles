@@ -17,7 +17,6 @@ $directory/.directories
 $directory/.macos
 $directory/.brew
 $directory/.cask
-$directory/.mas
 $directory/.additional_apps
 $directory/.oh_my_zsh
 $directory/.dotfiles

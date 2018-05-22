@@ -27,7 +27,6 @@ brew cask install --require-sha visual-studio-code
 brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install dropbox
 brew cask install google-chrome
-brew cask install skype
 ok
 
 running "Installing ant here because it has a dependency on java "

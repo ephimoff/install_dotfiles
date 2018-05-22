@@ -11,18 +11,6 @@ export HOMEBREW_CASK_OPTS=""
 # Ask for the administrator password upfront
 sudo -v
 
-# setup taps
-running "Setting up taps... "
-brew tap caskroom/fonts
-brew tap caskroom/cask
-ok
-
-
-# Install Caskroom
-running "Installing caskroom... "
-brew tap caskroom/versions
-ok
-
 # Install packages
 # You can comment out the apps that you don't want to install
 running "Installing apps..."
