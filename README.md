@@ -13,7 +13,6 @@ A collection of scripts to bootstrap a clean install of macOS.
 - [What's included](#whats-included)
     - [`.directories`](#directories)
     - [`.dotfiles`](#dotfiles)
-    - [`.templates`](#templates)
     - [`.macos`](#macos)
     - [`.brew`](#brew)
     - [`.cask`](#cask)
@@ -33,19 +32,26 @@ A collection of scripts to bootstrap a clean install of macOS.
 1. ~~Open xcode and accept the license agreement.~~
 1. ~~Install xcode command line tools:~~
 1. Clone this repository by running the following commands:
+
     ```
     mkdir ~/Projects
     git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
     ```
+
 1. Install homebrew by running the following command:
+
     ```
     ~/Projects/dotfiles/.brew_install
     ```
+
 1. Run the following command to do everything.  _Note: you will be prompted for your password a number of times during script execution._
+
     ```
     ~/Projects/dotfiles/bootstrap.sh
     ```
+
     Essentially, `bootstrap.sh` executes the following commands:
+
     ```
     # Create useful directories.
     ~/Projects/dotfiles/.directories
@@ -68,19 +74,25 @@ A collection of scripts to bootstrap a clean install of macOS.
     # Install oh_my_zsh.
     ~/Projects/dotfiles/.oh_my_zsh
     ```
+
 1. Install additional applications if you want:
+
     ```
     ~/Projects/dotfiles/.additional_apps
     ```
+
 1. Install MAS apps by running the following command. Note: You have to sign in to Apple Mac App Store first.
+
     ```
     ~/Projects/dotfiles/.mas
     ```
+
 1. Restart your computer.
 
 ## Update
 
 Run the following commands to get the latest version of this project:
+
 ```
 cd ~/Projects/dotfiles/
 git pull origin master
@@ -105,80 +117,29 @@ Create a symlink to the scripts
 - Sets up GIT config (i.e. GIT message, GIT ignore etc.)
 - Adds `.zshrc` configuration
 
-### `.templates`
-
-- Sets up GIT credentials
-- Adds more paths
-
 ### `.macos`
 
 Sets up macOS settings. See the output to find out what are the settings.
 
 ### `.brew`
 
-Updates Homebrew and installs the following packages:
-
-- `ack`
-- `ansible`
-- `bash-completion`
-- `bash`
-- `git`
-- `jq`
-- `rbenv ruby-build`
-- `rbenv`
-- `node`
-- `pyenv`
-- `shellcheck`
-- `vim --with-custom-python`
-- `zsh`
+Updates Homebrew and installs some packages
 
 ### `.cask`
 
-Install Cask and the following packages apps and fonts:
-
-- `dropbox`
-- `firefox`
-- `font-fira-code`
-- `font-source-code-pro`
-- `google-chrome`
-- `java`
-- `qlstephen`
-- `skype`
-- `virtualbox-extension-pack`
-- `virtualbox`
-- `visual-studio-code`
+Installs casks
 
 ### `.additional_apps`
 
-This is completely optional. Comment it out if you don't want it. Just a list of apps that I usually install:
-
-- `caffeine`
-- `flycut`
-- `grammarly`
-- `notion`
-- `numi`
-- `punto-switcher`
-- `spectacle`
+This is completely optional. Comment it out if you don't want it. Just a list of apps that I usually install
 
 ### `.mas`
 
-Install Mac App Store apps:
-
-- 1Password
-- iA Writer
-- Pixelmator
-- The Unarchiver
+Installs Mac App Store apps. Note: You have to sign in to Apple Mac App Store first.
 
 ### `.preferences`
 
-Updates preferences for the following apps:
-
-- ruby
-- ssh
-- vim
-- Mac OS apps (Terminal, Messages, Safari, Finder etc.)
-- Visual Studio Code
-- Spectacle
+Updates apps preferences
 
 ### `.oh_my_zsh`
 
