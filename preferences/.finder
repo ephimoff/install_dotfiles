@@ -53,7 +53,7 @@ running "Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 ok
 
-running "Sets default save target to be a local disk, not iCloud."
+running "Sets default save target to be a local disk, not iCloud"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 ok
 

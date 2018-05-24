@@ -8,7 +8,7 @@
 # shellcheck disable=SC1090
 source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
-running "Ruby: Installing rbenv, ruby 2.0 and 2.2, making 2.2 a default one and installing gems: bundler, mdl, rubocop,yaml-lint"
+running "Ruby: Installing rbenv, ruby 2.0 and 2.2"
 
 if [[ -f "/usr/local/bin/rbenv" ]] ; then
     eval "$(rbenv init -)"
