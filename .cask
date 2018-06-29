@@ -17,6 +17,7 @@ brew cask install --require-sha bettertouchtool
 brew cask install --require-sha eclipse-ide  
 brew cask install --require-sha eclipse-java  
 brew cask install --require-sha firefox  
+brew cask install --require-sha sequel-pro  
 brew cask install --require-sha font-fira-code  
 brew cask install --require-sha intellij-idea-ce  
 brew cask install --require-sha karabiner-elements 
