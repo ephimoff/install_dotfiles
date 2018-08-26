@@ -30,19 +30,24 @@ ok
 running "Installing applications..."
 brew install ack
 brew install ansible
+brew install autojump
 brew install bash
 brew install bash-completion
 brew install git
 brew install jq
+brew install libyaml
 brew install node
 brew install pyenv
 brew install rbenv
 brew install rbenv-bundler
 brew install shellcheck
+brew install sqlite
 brew install tldr
 brew install vim
+brew install yarn
 brew install zsh
-ok
+ok		
+
 
 running "Cleaning up unneeded files..."
 brew cleanup
