@@ -14,6 +14,7 @@ sudo -v
 # Install packages
 # You can comment out the apps that you don't want to install
 running "Installing apps..."
+brew cask install 1password6     # https://1password.com
 brew cask install anydesk        # https://anydesk.com/remote-desktop
 brew cask install caffeine       # http://lightheadsw.com/caffeine/
 brew cask install flycut         # https://github.com/TermiT/Flycut/
