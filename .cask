@@ -14,13 +14,13 @@ sudo -v
 running "Installing apps..."
 brew cask install --require-sha bettertouchtool  
 brew cask install --require-sha docker
-brew cask install --require-sha dropbox
+brew cask install dropbox
 brew cask install --require-sha eclipse-ide  
 brew cask install --require-sha eclipse-java  
 brew cask install --require-sha firefox  
 brew cask install --require-sha font-fira-code  
 brew cask install --require-sha google-chrome
-brew cask install --require-sha highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
+brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install --require-sha intellij-idea-ce  
 brew cask install --require-sha java
 brew cask install --require-sha karabiner-elements 
