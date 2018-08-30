@@ -16,5 +16,7 @@ if [[ -f "$shortcutsSource" ]] ; then
     [[ -f "$shortcutsTarget" ]] && rm -rf "$shortcutsTarget"
     ok
     ln -s "$shortcutsSource" "$shortcutsTarget"
+else
+    ln -s "$shortcutsSource" "$shortcutsTarget"
 fi
 ok
