@@ -17,7 +17,6 @@ ok
 APPS=(
   425424353 # The Unarchiver
   407963104 # Pixelmator
-  540348655 # Monosnap - screenshot editor
   880001334 # Reeder 3
 )
 running "Installing mas apps"
