@@ -66,7 +66,7 @@ fi
 ok
 
 running "VS Code: Installing extensions"
-cat .vscode_extensions | xargs -L1 code --install-extension
+xargs -L1 code --install-extension < .vscode_extensions
 # code --install-extension abusaidm.html-snippets
 # code --install-extension Alan.stylus
 # code --install-extension AlanWalk.markdown-toc
