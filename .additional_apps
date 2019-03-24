@@ -15,18 +15,11 @@ sudo -v
 # You can comment out the apps that you don't want to install
 running "Installing apps..."
 brew cask install 1password     # https://1password.com
-brew cask install anydesk        # https://anydesk.com/remote-desktop
 brew cask install flycut         # https://github.com/TermiT/Flycut/
 brew cask install grammarly      # https://www.grammarly.com
 brew cask install notion         # https://www.notion.so
-brew cask install numi           # http://numi.io
-brew cask install postman        # https://www.getpostman.com
 brew cask install skype          # skype
 brew cask install spectacle      # https://www.spectacleapp.com
-brew cask install teamviewer     # https://www.teamviewer.com/en/
-brew cask install whatsapp       # whatsapp
-brew cask install --require-sha google-drive-file-stream
-brew cask install --require-sha telegram
 ok
 
 running "Cleaning up unneeded files..."

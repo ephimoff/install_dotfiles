@@ -28,18 +28,16 @@ ok
 
 # install applications
 running "Installing applications..."
-brew install ack
+# brew install ack
 brew install ansible
-brew install autojump
 brew install bash
 brew install bash-completion
 brew install git
-brew install jq
-brew install libyaml
+# brew install libyaml
 brew install node
-brew install pyenv
-brew install rbenv
-brew install rbenv-bundler
+# brew install pyenv
+# brew install rbenv
+# brew install rbenv-bundler
 brew install shellcheck
 brew install sqlite
 brew install tldr
