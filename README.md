@@ -1,36 +1,32 @@
 # dotfiles
 
-![Logo of the project](./images/logo.png)
-
 [![Build Status](https://travis-ci.org/ephimoff/dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/dotfiles)
 
 A collection of scripts to bootstrap a clean install of macOS.
 
 <!-- TOC -->
 
-- [Installation](#installation)
-- [Update](#update)
-- [What's included](#whats-included)
+- [dotfiles](#dotfiles)
+  - [Installation](#installation)
+  - [Update](#update)
+  - [What's included](#whats-included)
     - [`.directories`](#directories)
     - [`.dotfiles`](#dotfiles)
     - [`.macos`](#macos)
     - [`.brew`](#brew)
     - [`.cask`](#cask)
-    - [`.additional_apps`](#additional_apps)
     - [`.mas`](#mas)
     - [`.preferences`](#preferences)
-    - [`.oh_my_zsh`](#oh_my_zsh)
-- [Feedback](#feedback)
-- [Acknowedgements](#acknowedgements)
-- [Warning / Liability](#warning--liability)
+    - [`.oh_my_zsh`](#ohmyzsh)
+  - [Feedback](#feedback)
+  - [Acknowedgements](#acknowedgements)
+  - [Warning / Liability](#warning--liability)
 
 <!-- /TOC -->
 
 ## Installation
 
-1. [UPDATE: Hombrew now installs the XCode Command line tools for you] ~~Install xcode from the app store.~~
-1. ~~Open xcode and accept the license agreement.~~
-1. ~~Install xcode command line tools:~~
+1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools.
 1. Clone this repository by running the following commands:
 
     ```
@@ -123,15 +119,11 @@ Sets up macOS settings. See the output to find out what are the settings.
 
 ### `.brew`
 
-Updates Homebrew and installs some packages
+Updates Homebrew and installs some packages. Comment it out the ones you don't want
 
 ### `.cask`
 
-Installs casks
-
-### `.additional_apps`
-
-This is completely optional. Comment it out if you don't want it. Just a list of apps that I usually install
+Installs casks. Comment it out the ones you don't want.
 
 ### `.mas`
 

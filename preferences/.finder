@@ -28,14 +28,14 @@ running "Finder: show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
 ok
 
-running "Finder: when performing a search, search the current folder by default"
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-ok
+# running "Finder: when performing a search, search the current folder by default"
+# defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# ok
 
-running "Finder: use column view in all Finder windows by default"
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-ok
+# running "Finder: use column view in all Finder windows by default"
+# # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+# defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# ok
 
 running "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
