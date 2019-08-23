@@ -66,7 +66,7 @@ fi
 ok
 
 running "VS Code: Installing extensions"
-xargs -L1 code --install-extension < .vscode_extensions
+xargs -L1 code --install-extension < ~/Projects/dotfiles/preferences/.vscode_extensions
 ok
 
 running "VS Code: Installing jshint Node.js app (without it the extension won't work)"

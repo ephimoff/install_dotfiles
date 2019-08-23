@@ -13,11 +13,10 @@ bot "Here I go..."
 directory=~/Projects/dotfiles
 
 $directory/.directories
-# $directory/.templates
+$directory/.templates
 $directory/.macos
 $directory/.brew
 $directory/.cask
-$directory/.additional_apps
 $directory/.oh_my_zsh
 $directory/.dotfiles
 $directory/.preferences
