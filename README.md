@@ -1,5 +1,7 @@
 # Installing dotfiles
 
+[![Build Status](https://travis-ci.org/ephimoff/install_dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/install_dotfiles)
+
 A collection of scripts that installs dotfiles from [this repo](https://github.com/ephimoff/dotfiles)
 
 ## Installation
