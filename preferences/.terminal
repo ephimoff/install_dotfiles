@@ -3,19 +3,13 @@
 ###############################################################################
 # Visual Studio Code
 ###############################################################################
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
-running "Terminal: Open Light theme"
+echo "Terminal: Open Light theme"
 open "${HOME}/Projects/dotfiles-min/applications/terminal/Snazzy.terminal"
-ok
 
-running "Terminal: Make Snazzy theme the default one"
+echo "Terminal: Make Snazzy theme the default one"
 defaults write com.apple.Terminal 'Default Window Settings' -string Snazzy
-ok
 defaults write com.apple.Terminal 'Startup Window Settings' -string Snazzy
-ok
 
-running "Terminal: Disable the annoying line marks"
+echo "Terminal: Disable the annoying line marks"
 defaults write com.apple.Terminal ShowLineMarks -int 0
-ok

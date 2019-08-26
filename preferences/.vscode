@@ -3,8 +3,6 @@
 ###############################################################################
 # Visual Studio Code
 ###############################################################################
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 settingsSource=$HOME/Projects/dotfiles-min/applications/vscode/settings.json
 keybindingsSource=$HOME/Projects/dotfiles-min/applications/vscode/keybindings.json
@@ -20,64 +18,53 @@ vsiconsTarget=$vsCodeUser/vsicons.settings.json
 projectsTarget=$vsCodeUser/projects.json
 snippetsTarget=$vsCodeUser/snippets/
 
-# running "VS Code: Making the required directories if they don't exist"
-# [[ ! -d "$vsCodeUser" ]] && mkdir -p "$installedPackages"
-# ok
+printf "VS Code: Linking config files\\n"
 
-running "VS Code: Linking config files\\n"
-
-running "VS Code: Linking settings.json"
+echo "VS Code: Linking settings.json"
 if [[ -f "$settingsSource" ]] ; then
     [[ -f "$settingsTarget" ]] && rm -rf "$settingsTarget"
     ln -s "$settingsSource" "$settingsTarget"
 else
     ln -s "$settingsSource" "$settingsTarget"
 fi
-ok
 
 
-running "VS Code: Linking keybindings.json"
+echo "VS Code: Linking keybindings.json"
 if [[ -f "$keybindingsSource" ]] ; then
     [[ -f "$keybindingsTarget" ]] && rm -rf "$keybindingsTarget"
     ln -s "$keybindingsSource" "$keybindingsTarget"
 else
     ln -s "$keybindingsSource" "$keybindingsTarget"
 fi
-ok
 
-running "VS Code: Linking icons"
+echo "VS Code: Linking icons"
 if [[ -f "$vsiconsSource" ]] ; then
     [[ -f "$vsiconsTarget" ]] && rm -rf "$vsiconsTarget"
     ln -s "$vsiconsSource" "$vsiconsTarget"
 else
     ln -s "$vsiconsSource" "$vsiconsTarget"
 fi
-ok
 
-running "VS Code: Linking snippets\\n"
+printf "VS Code: Linking snippets\\n"
 if [[ -d "$snippetsSource" ]] ; then
-    running "VS Code: Remove snippets directory if already exists"
+    echo "VS Code: Remove snippets directory if already exists"
     [[ -d "$snippetsTarget" ]] && rm -rf "$snippetsTarget"
-    ok
+
     ln -s "$snippetsSource" "$snippetsTarget"
 else
     ln -s "$snippetsSource" "$snippetsTarget"
 fi
-ok
 
-running "VS Code: Installing extensions"
+echo "VS Code: Installing extensions"
 xargs -L1 code --install-extension < ~/Projects/dotfiles/preferences/.vscode_extensions
-ok
 
-running "VS Code: Installing jshint Node.js app (without it the extension won't work)"
+echo "VS Code: Installing jshint Node.js app (without it the extension won't work)"
 npm i -g jshint
-ok
 
-running "VS Code: Linking porjects list from the Projects extension\\n"
+printf "VS Code: Linking porjects list from the Projects extension\\n"
 if [[ -f "$projectsSource" ]] ; then
     [[ -f "$projectsTarget" ]] && rm -rf "$projectsTarget"
     ln -s "$projectsSource" "$projectsTarget"
 else
     ln -s "$projectsSource" "$projectsTarget"
 fi
-ok

@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
 # Start
-bot "Starting $(basename "$0")"
+echo "Starting $(basename "$0")"
 
 # homebrew options
 export HOMEBREW_CASK_OPTS=""
@@ -11,14 +8,14 @@ export HOMEBREW_CASK_OPTS=""
 # Ask for the administrator password upfront
 sudo -v
 
-running "Installing apps..."
+echo "Installing apps..."
 brew cask install --require-sha bettertouchtool  
 brew cask install --require-sha docker
 brew cask install --require-sha font-fira-code  
 brew cask install --require-sha google-chrome
 brew cask install --require-sha karabiner-elements 
 brew cask install --require-sha qlstephen # Preview plain text files without or with unknown file extension. Example: README, CHANGELOG, index.styl, etc.
-brew cask install --require-sha sequel-pro  
+brew cask install --require-sha sequel-pro
 brew cask install --require-sha visual-studio-code
 brew cask install --require-sha hammerspoon
 
@@ -27,12 +24,13 @@ brew cask install dropbox
 brew cask install flycut         # https://github.com/TermiT/Flycut/
 brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install notion         # https://www.notion.so
-ok
+brew cask install numi         # 
 
 
-running "Cleaning up unneeded files..."
+
+echo "Cleaning up unneeded files..."
 brew cleanup
-ok
+
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."

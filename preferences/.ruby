@@ -4,11 +4,7 @@
 # ruby
 ###############################################################################
 
-# include colorized echo
-# shellcheck disable=SC1090
-# source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
-# running "Ruby: Installing rbenv, ruby 2.0 and 2.2"
+# echo "Ruby: Installing rbenv, ruby 2.0 and 2.2"
 
 # if [[ -f "/usr/local/bin/rbenv" ]] ; then
 #     eval "$(rbenv init -)"
@@ -31,4 +27,3 @@
 #     echo "ERROR: rbenv is not available."
 #     exit 1
 # fi
-# ok

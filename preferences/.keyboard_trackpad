@@ -1,33 +1,23 @@
 #!/usr/bin/env bash
 
-# include colorized echo
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
 ###############################################################################
 # Trackpad, keyboard
 ###############################################################################
 
-running "Trackpad: enable tap to click"
+echo "Trackpad: enable tap to click"
 defaults -currentHost write NSGlobalDomain "com.apple.mouse.tapBehavior" -int 1
-ok
 
-running "Trackpad: disable look up"
+echo "Trackpad: disable look up"
 defaults -currentHost write NSGlobalDomain "com.apple.trackpad.threeFingerTapGesture" -int 0
-ok
 
-running "Trackpad: enable 3 finger drag"
+echo "Trackpad: enable 3 finger drag"
 defaults -currentHost write NSGlobalDomain "com.apple.trackpad.threeFingerDragGesture" -int 1
-ok
 
-running "Trackpad: disable swipe between pages"
+echo "Trackpad: disable swipe between pages"
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
-ok
 
-running "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
+echo "Keyboard: enable full keyboard access for all controls, (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
-ok
 
-running "Keyboard: Disable auto-correct"
+echo "Keyboard: Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-ok

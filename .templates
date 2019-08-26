@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
 # Start
-bot "Starting $(basename "$0")"
+echo "Starting $(basename "$0")"
 
 directory=~/Projects/dotfiles/templates
 files=$(find $directory -iname ".*" -maxdepth 1 -type f)
@@ -14,4 +11,4 @@ for file in ${files[@]} ; do
 done
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."

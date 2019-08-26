@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 # Start
-bot "Starting $(basename "$0")"
+echo "Starting $(basename "$0")"
 
 # Ask for the administrator password upfront
 sudo -v
 
 # install mas first
-running "Installing mas"
+echo "Installing mas"
 brew install mas
-ok
 # install applications
 
 APPS=(
@@ -20,12 +17,11 @@ APPS=(
   407963104 # Pixelmator
   880001334 # Reeder 3
 )
-running "Installing mas apps"
+echo "Installing mas apps"
 mas install "${APPS[@]}"
-ok
 
 # cleanup unneeded files
 brew cleanup
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."

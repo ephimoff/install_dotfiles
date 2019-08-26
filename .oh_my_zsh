@@ -1,28 +1,21 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 # Start
-bot "Starting $(basename "$0")"
+echo "Starting $(basename "$0")"
 
-running "Installing oh-my-zsh (http://ohmyz.sh)"
+echo "Installing oh-my-zsh (http://ohmyz.sh)"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ok
 
-running "Instaling oh-my-zsh theme: powerlevel9k (see https://github.com/bhilburn/powerlevel9k for more info)"
+echo "Instaling oh-my-zsh theme: powerlevel9k (see https://github.com/bhilburn/powerlevel9k for more info)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-ok
 
-running "Instaling zsh-autosuggestions plugin"
+echo "Instaling zsh-autosuggestions plugin"
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
-ok
 
-running "Instaling zsh-syntax-highlighting plugin"
+echo "Instaling zsh-syntax-highlighting plugin"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-ok
 
-running "Making zsh default shell"
+echo "Making zsh default shell"
 chsh -s /bin/zsh
-ok
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."

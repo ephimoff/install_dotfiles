@@ -27,14 +27,14 @@ A collection of scripts to bootstrap a clean install of macOS.
 ## Installation
 
 1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools.
-1. Clone this repository by running the following commands:
+1. Clone this repository by echo the following commands:
 
     ```
     mkdir ~/Projects
     git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
     ```
 
-1. Install homebrew by running the following command:
+1. Install homebrew by echo the following command:
 
     ```
     ~/Projects/dotfiles/.brew_install
@@ -77,7 +77,7 @@ A collection of scripts to bootstrap a clean install of macOS.
     ~/Projects/dotfiles/.additional_apps
     ```
 
-1. Install MAS apps by running the following command. Note: You have to sign in to Apple Mac App Store first.
+1. Install MAS apps by echo the following command. Note: You have to sign in to Apple Mac App Store first.
 
     ```
     ~/Projects/dotfiles/.mas

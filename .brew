@@ -1,33 +1,27 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
 # Start
-bot "Starting $(basename "$0"). Note: it may take a while"
+echo "Starting $(basename "$0"). Note: it may take a while"
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Make sure we’re using the latest Homebrew
-running "Updating brew..."
+echo "Updating brew..."
 brew update
-ok
 
 # Upgrade any already-installed formulae
-running "Upgrading formulae..."
+echo "Upgrading formulae..."
 brew upgrade
-ok
 
-running "Setting up taps... "
+echo "Setting up taps... "
 brew tap caskroom/versions
 brew tap homebrew/core
 brew tap caskroom/cask
 brew tap caskroom/fonts
-ok
 
 # install applications
-running "Installing applications..."
+echo "Installing applications..."
 # brew install node
 # brew install sqlite
 # brew install yarn
@@ -38,13 +32,11 @@ brew install ansible
 brew install shellcheck
 brew install tldr
 brew install vim
-brew install zsh
-ok		
+brew install zsh		
 
 
-running "Cleaning up unneeded files..."
+echo "Cleaning up unneeded files..."
 brew cleanup
-ok
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."

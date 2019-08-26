@@ -3,18 +3,14 @@
 ###############################################################################
 # Karabiner Elements.app
 ###############################################################################
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 karabinerSource=$HOME/Projects/dotfiles-min/applications/karabiner/karabiner/
 
 karabinerTarget=$HOME/.config/
 
-running "Karabiner: Linking config file"
+echo "Karabiner: Linking config file"
 if [[ -f "$karabinerSource" ]] ; then
-    running "Karabiner: Remove shortcuts files if already exists"
+    echo "Karabiner: Remove shortcuts files if already exists"
     [[ -f "$karabinerTarget" ]] && rm -rf "$karabinerTarget"
-    ok
     ln -s "$karabinerSource" "$karabinerTarget"
 fi
-ok

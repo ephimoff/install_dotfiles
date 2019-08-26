@@ -1,21 +1,8 @@
 #!/usr/bin/env bash
 
-# include colorized echo
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
-
 ###############################################################################
 # Mail
 ###############################################################################
 
-running "Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
+echo "Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-ok
-
-# running "Mail.app: Disable inline attachments (just show the icons)"
-# defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
-# ok
-
-# running "Mail.app: Insert attachments at end of message (stops exchange servers adding ATT00001.htm etc. to your emails)"
-# defaults write com.apple.mail AttachAtEnd -bool true
-# ok

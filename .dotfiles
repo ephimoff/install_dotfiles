@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1090
-source "${HOME}/Projects/dotfiles/bin/echos.sh"
 
 # Start
-bot "Starting $(basename "$0")"
+echo "Starting $(basename "$0")"
 
 dotfiles_repo="https://github.com/ephimoff/dotfiles-min.git"
 dotfiles_repo_dest="${HOME}/Projects/dotfiles-min"
 
-running "Clonning a dotfiles repository: $dotfiles_repo"
+echo "Clonning a dotfiles repository: $dotfiles_repo"
 git clone "$dotfiles_repo" "$dotfiles_repo_dest"
-ok
 
 
 directory="$dotfiles_repo_dest/dotfiles"
@@ -25,13 +22,13 @@ function doIt() {
     # shellcheck disable=SC2068
     for file in ${files[@]} ; do
         if [[ -f "$HOME/$(basename "$file")" ]] ; then
-            running "Moving $HOME/$(basename "$file") to $backup"
+            echo "Moving $HOME/$(basename "$file") to $backup"
             mv -n "$HOME/$(basename "$file")" "$backup"/
-            ok
+        
         fi
-        running "Symlinking $file to $HOME/$(basename "$file")"
+        echo "Symlinking $file to $HOME/$(basename "$file")"
         ln -f -s "$file" "$HOME/$(basename "$file")"
-        ok
+    
     done
 }
 
@@ -44,4 +41,4 @@ fi
 unset doIt
 
 # Finished
-bot "$(basename "$0") complete."
+echo "$(basename "$0") complete."
