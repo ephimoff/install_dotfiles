@@ -24,7 +24,7 @@ brew cask install dropbox
 brew cask install flycut         # https://github.com/TermiT/Flycut/
 brew cask install highsierramediakeyenabler # disable annoying behaviour of media keys for Safari 
 brew cask install notion         # https://www.notion.so
-brew cask install numi         # 
+brew cask install numi
 
 
 

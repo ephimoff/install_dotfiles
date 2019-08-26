@@ -3,8 +3,8 @@
 # Start
 echo "Starting $(basename "$0")"
 
-dotfiles_repo="https://github.com/ephimoff/dotfiles-min.git"
-dotfiles_repo_dest="${HOME}/Projects/dotfiles-min"
+dotfiles_repo="https://github.com/ephimoff/dotfiles.git"
+dotfiles_repo_dest="${HOME}/Projects/dotfiles"
 
 echo "Clonning a dotfiles repository: $dotfiles_repo"
 git clone "$dotfiles_repo" "$dotfiles_repo_dest"
