@@ -26,12 +26,6 @@ A collection of scripts that installs dotfiles from [this repo](https://github.c
     ~/Projects/install_dotfiles/bootstrap.sh
     ```
 
-1. Install MAS apps by echo the following command. Note: You have to sign in to Apple Mac App Store first.
-
-    ```
-    ~/Projects/install_dotfiles/.mas
-    ```
-
 1. Restart your computer.
 
 ## Update

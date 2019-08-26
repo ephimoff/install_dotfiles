@@ -7,28 +7,30 @@ echo "Starting $(basename "$0"). Note: it may take a while"
 sudo -v
 
 # Make sure we’re using the latest Homebrew
-echo "Updating brew..."
-brew update
+# echo "Updating brew..."
+# brew update
 
-# Upgrade any already-installed formulae
-echo "Upgrading formulae..."
-brew upgrade
+# # Upgrade any already-installed formulae
+# echo "Upgrading formulae..."
+# brew upgrade
 
-echo "Setting up taps... "
-brew tap caskroom/versions
-brew tap homebrew/core
-brew tap caskroom/cask
-brew tap caskroom/fonts
+# echo "Setting up taps... "
+# brew tap caskroom/versions
+# brew tap homebrew/core
+# brew tap caskroom/cask
+# brew tap caskroom/fonts
 
-# install applications
-echo "Installing applications..."
-brew install ansible
-brew install shellcheck
-brew install tldr
-brew install vim
-brew install zsh
-brew install zsh-completions
+# # install applications
+# echo "Installing applications..."
+# brew install ansible
+# brew install shellcheck
+# brew install tldr
+# brew install vim
+# brew install zsh
+# brew install zsh-completions
 
+# Install everything from a Brewfile
+brew bundle --file "${HOME}/Projects/dotfiles/applications/brew/Brewfile"
 
 echo "Cleaning up unneeded files..."
 brew cleanup

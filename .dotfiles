@@ -3,14 +3,7 @@
 # Start
 echo "Starting $(basename "$0")"
 
-dotfiles_repo="https://github.com/ephimoff/dotfiles.git"
-dotfiles_repo_dest="${HOME}/Projects/dotfiles"
-
-echo "Clonning a dotfiles repository: $dotfiles_repo"
-git clone "$dotfiles_repo" "$dotfiles_repo_dest"
-
-
-directory="$dotfiles_repo_dest/dotfiles"
+directory="${HOME}/Projects/dotfiles/dotfiles"
 backup=~/.dotfiles_backup
 files=$(find "$directory" -iname ".*" -maxdepth 1 -type f)
 
