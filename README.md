@@ -4,84 +4,66 @@
 
 A collection of scripts to bootstrap a clean install of macOS.
 
-<!-- TOC -->
-
-- [dotfiles](#dotfiles)
-  - [Installation](#installation)
-  - [Update](#update)
-  - [What's included](#whats-included)
-    - [`.directories`](#directories)
-    - [`.dotfiles`](#dotfiles)
-    - [`.macos`](#macos)
-    - [`.brew`](#brew)
-    - [`.cask`](#cask)
-    - [`.mas`](#mas)
-    - [`.preferences`](#preferences)
-    - [`.oh_my_zsh`](#ohmyzsh)
-  - [Feedback](#feedback)
-  - [Acknowedgements](#acknowedgements)
-  - [Warning / Liability](#warning--liability)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [dotfiles](#dotfiles)auto  - [Installation](#installation)auto  - [Update](#update)auto  - [What's included](#whats-included)auto    - [`.directories`](#directories)auto    - [`.dotfiles`](#dotfiles)auto    - [`.macos`](#macos)auto    - [`.brew`](#brew)auto    - [`.cask`](#cask)auto    - [`.mas`](#mas)auto    - [`.preferences`](#preferences)auto    - [`.oh_my_zsh`](#oh_my_zsh)auto  - [Feedback](#feedback)auto  - [Acknowedgements](#acknowedgements)auto  - [Warning / Liability](#warning--liability)autoauto<!-- /TOC -->
 
 ## Installation
 
 1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools.
 1. Clone this repository by echo the following commands:
 
-    ```
-    mkdir ~/Projects
-    git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
-    ```
+```
+mkdir ~/Projects
+git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
+```
 
 1. Install homebrew by echo the following command:
 
-    ```
-    ~/Projects/dotfiles/.brew_install
-    ```
+```
+~/Projects/dotfiles/.brew_install
+```
 
 1. Run the following command to do everything.  _Note: you will be prompted for your password a number of times during script execution._
 
-    ```
-    ~/Projects/dotfiles/bootstrap.sh
-    ```
+```
+~/Projects/dotfiles/bootstrap.sh
+```
 
-    Essentially, `bootstrap.sh` executes the following commands:
+Essentially, `bootstrap.sh` executes the following commands:
 
-    ```
-    # Create useful directories.
-    ~/Projects/dotfiles/.directories
+```
+# Create useful directories.
+~/Projects/dotfiles/.directories
 
-    # Backup existing dotfiles and symlink to the dotfiles in this project.
-    ~/Projects/dotfiles/.dotfiles
+# Backup existing dotfiles and symlink to the dotfiles in this project.
+~/Projects/dotfiles/.dotfiles
 
-    # Configure sensible defaults in macOS.
-    ~/Projects/dotfiles/.macos
+# Configure sensible defaults in macOS.
+~/Projects/dotfiles/.macos
 
-    # Install command line package manager and additional command line tools.
-    ~/Projects/dotfiles/.brew
+# Install command line package manager and additional command line tools.
+~/Projects/dotfiles/.brew
 
-    # Install command line package manager and additional applications.
-    ~/Projects/dotfiles/.cask
+# Install command line package manager and additional applications.
+~/Projects/dotfiles/.cask
 
-    # Apply preferences to applications.
-    ~/Projects/dotfiles/.preferences
+# Apply preferences to applications.
+~/Projects/dotfiles/.preferences
 
-    # Install oh_my_zsh.
-    ~/Projects/dotfiles/.oh_my_zsh
-    ```
+# Install oh_my_zsh.
+~/Projects/dotfiles/.oh_my_zsh
+```
 
 1. Install additional applications if you want:
 
-    ```
-    ~/Projects/dotfiles/.additional_apps
-    ```
+```
+~/Projects/dotfiles/.additional_apps
+```
 
 1. Install MAS apps by echo the following command. Note: You have to sign in to Apple Mac App Store first.
 
-    ```
-    ~/Projects/dotfiles/.mas
-    ```
+```
+~/Projects/dotfiles/.mas
+```
 
 1. Restart your computer.
 
