@@ -4,11 +4,11 @@
 # Visual Studio Code
 ###############################################################################
 
-settingsSource=$HOME/Projects/dotfiles-min/applications/vscode/settings.json
-keybindingsSource=$HOME/Projects/dotfiles-min/applications/vscode/keybindings.json
-vsiconsSource=$HOME/Projects/dotfiles-min/applications/vscode/vsicons.settings.json
-projectsSource=$HOME/Projects/dotfiles-min/applications/vscode/projects.json
-snippetsSource=$HOME/Projects/dotfiles-min/applications/vscode/snippets/
+settingsSource=$HOME/Projects/dotfiles/applications/vscode/settings.json
+keybindingsSource=$HOME/Projects/dotfiles/applications/vscode/keybindings.json
+vsiconsSource=$HOME/Projects/dotfiles/applications/vscode/vsicons.settings.json
+projectsSource=$HOME/Projects/dotfiles/applications/vscode/projects.json
+snippetsSource=$HOME/Projects/dotfiles/applications/vscode/snippets/
 
 vsCodeUser=$HOME/Library/Application\ Support/Code/User
 
@@ -16,7 +16,7 @@ settingsTarget=$vsCodeUser/settings.json
 keybindingsTarget=$vsCodeUser/keybindings.json
 vsiconsTarget=$vsCodeUser/vsicons.settings.json
 projectsTarget=$vsCodeUser/projects.json
-snippetsTarget=$vsCodeUser/snippets/
+snippetsTarget=$vsCodeUser/snippets
 
 printf "VS Code: Linking config files\\n"
 
@@ -56,10 +56,7 @@ else
 fi
 
 echo "VS Code: Installing extensions"
-xargs -L1 code --install-extension < ~/Projects/dotfiles/preferences/.vscode_extensions
-
-echo "VS Code: Installing jshint Node.js app (without it the extension won't work)"
-npm i -g jshint
+xargs -L1 code --install-extension < ~/Projects/dotfiles/applications/vscode/.vscode_extensions
 
 printf "VS Code: Linking porjects list from the Projects extension\\n"
 if [[ -f "$projectsSource" ]] ; then

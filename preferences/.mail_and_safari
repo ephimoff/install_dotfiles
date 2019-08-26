@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Mail
+###############################################################################
+
+echo "Mail.app: copy email addresses as \`foo@example.com\` instead of \`Foo Bar <foo@example.com>\`"
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+###############################################################################
+# Safari & WebKit
+###############################################################################
+
+echo "Safari: prevent Safari from opening ‘safe’ files automatically after downloading"
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+echo "Safari: Enable Safari’s debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true

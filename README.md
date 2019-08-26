@@ -1,69 +1,34 @@
-# dotfiles
+# Installing dotfiles
 
-[![Build Status](https://travis-ci.org/ephimoff/dotfiles.svg?branch=master)](https://travis-ci.org/ephimoff/dotfiles)
-
-A collection of scripts to bootstrap a clean install of macOS.
-
-<!-- TOC -->autoauto- [dotfiles](#dotfiles)auto  - [Installation](#installation)auto  - [Update](#update)auto  - [What's included](#whats-included)auto    - [`.directories`](#directories)auto    - [`.dotfiles`](#dotfiles)auto    - [`.macos`](#macos)auto    - [`.brew`](#brew)auto    - [`.cask`](#cask)auto    - [`.mas`](#mas)auto    - [`.preferences`](#preferences)auto    - [`.oh_my_zsh`](#oh_my_zsh)auto  - [Feedback](#feedback)auto  - [Acknowedgements](#acknowedgements)auto  - [Warning / Liability](#warning--liability)autoauto<!-- /TOC -->
+A collection of scripts that installs dotfiles from [this repo](https://github.com/ephimoff/dotfiles)
 
 ## Installation
 
 1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools.
 1. Clone this repository by echo the following commands:
 
-```
-mkdir ~/Projects
-git clone https://github.com/ephimoff/dotfiles.git ~/Projects/dotfiles
-```
+    ```
+    mkdir ~/Projects
+    git clone https://github.com/ephimoff/install_dotfiles.git ~/Projects/install_dotfiles
+    ```
 
-1. Install homebrew by echo the following command:
+1. Install homebrew by running the following command:
 
-```
-~/Projects/dotfiles/.brew_install
-```
+    ```
+    ~/Projects/install_dotfiles/.brew_install
+    ```
 
 1. Run the following command to do everything.  _Note: you will be prompted for your password a number of times during script execution._
 
-```
-~/Projects/dotfiles/bootstrap.sh
-```
-
-Essentially, `bootstrap.sh` executes the following commands:
-
-```
-# Create useful directories.
-~/Projects/dotfiles/.directories
-
-# Backup existing dotfiles and symlink to the dotfiles in this project.
-~/Projects/dotfiles/.dotfiles
-
-# Configure sensible defaults in macOS.
-~/Projects/dotfiles/.macos
-
-# Install command line package manager and additional command line tools.
-~/Projects/dotfiles/.brew
-
-# Install command line package manager and additional applications.
-~/Projects/dotfiles/.cask
-
-# Apply preferences to applications.
-~/Projects/dotfiles/.preferences
-
-# Install oh_my_zsh.
-~/Projects/dotfiles/.oh_my_zsh
-```
-
-1. Install additional applications if you want:
-
-```
-~/Projects/dotfiles/.additional_apps
-```
+    ```
+    ~/Projects/install_dotfiles/bootstrap.sh
+    ```
 
 1. Install MAS apps by echo the following command. Note: You have to sign in to Apple Mac App Store first.
 
-```
-~/Projects/dotfiles/.mas
-```
+    ```
+    ~/Projects/install_dotfiles/.mas
+    ```
 
 1. Restart your computer.
 
@@ -72,62 +37,18 @@ Essentially, `bootstrap.sh` executes the following commands:
 Run the following commands to get the latest version of this project:
 
 ```
-cd ~/Projects/dotfiles/
+cd ~/Projects/install_dotfiles/
 git pull origin master
 ```
 
-## What's included
-
-### `.directories`
-
-Creates 3 folders:
-
-1. `~/Downloads/.transmission/incomplete`
-1. `~/Projects/eclipse_workspace`
-1. `~/tmp`
-
-Create a symlink to the scripts
-
-### `.dotfiles`
-
-- Backs up the current dotfiles to `~/.dotfiles_backup`
-- Sets up aliases, shell variables and paths, creates useful functions
-- Sets up GIT config (i.e. GIT message, GIT ignore etc.)
-- Adds `.zshrc` configuration
-
-### `.macos`
-
-Sets up macOS settings. See the output to find out what are the settings.
-
-### `.brew`
-
-Updates Homebrew and installs some packages. Comment it out the ones you don't want
-
-### `.cask`
-
-Installs casks. Comment it out the ones you don't want.
-
-### `.mas`
-
-Installs Mac App Store apps. Note: You have to sign in to Apple Mac App Store first.
-
-### `.preferences`
-
-Updates apps preferences
-
-### `.oh_my_zsh`
-
-Installs [oh_my_zsh](http://ohmyz.sh) shell
-
 ## Feedback
 
-Suggestions/improvements [welcome](https://github.com/ephimoff/dotfiles/issues)!
+Suggestions/improvements [welcome](https://github.com/ephimoff/install_dotfiles/issues)!
 
 ## Acknowedgements
 
 - [Mathias Bynens](https://github.com/mathiasbynens)
 - [Craig Hurley](https://github.com/craighurley/dotfiles)
-- [atomantic](https://github.com/atomantic/dotfiles)
 
 ## Warning / Liability
 
