@@ -12,9 +12,5 @@ addons:
     packages:
     - shellcheck
 
-# before_install:
-#   - brew update
-#   - brew install shellcheck
-
 script:
   - ./test.sh
