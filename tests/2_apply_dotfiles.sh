@@ -5,4 +5,7 @@ set -o pipefail
 IFS=$'\n'
 
 # run dotfiles
-"$(dirname "$(pwd)")"/bootstrap.sh
+echo "Current dir is $(pwd)"
+echo "The content of this dir is:"
+ls -la
+"$(dirname "$(pwd)")/bootstrap.sh"
