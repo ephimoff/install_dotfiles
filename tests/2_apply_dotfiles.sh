@@ -5,8 +5,11 @@ set -o pipefail
 IFS=$'\n'
 
 # run dotfiles
-echo "Current dir is $(pwd)"
-# echo "The content of this dir is:"
-# ls -la
-"./bootstrap.sh"
-# "$(dirname "$(pwd)")/bootstrap.sh"
+
+"./directories.sh"
+"./templates.sh"
+"./macos.sh"
+"./brew.sh"
+"./oh_my_zsh.sh"
+"./dotfiles.sh"
+"./preferences.sh"
