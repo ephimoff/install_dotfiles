@@ -11,14 +11,14 @@ dotfiles_repo_dest="${HOME}/Projects/dotfiles"
 echo "Clonning a dotfiles repository: $dotfiles_repo"
 git clone "$dotfiles_repo" "$dotfiles_repo_dest"
 
-$directory/.directories
-$directory/.templates
-$directory/.macos
-$directory/.brew
-# $directory/.cask
-$directory/.oh_my_zsh
-$directory/.dotfiles
-$directory/.preferences
+$directory/directories.sh
+$directory/templates.sh
+$directory/macos.sh
+$directory/brew.sh
+# $directory/cask.sh
+$directory/oh_my_zsh.sh
+$directory/dotfiles.sh
+$directory/preferences.sh
 
 # Finished
 echo "$(basename "$0") complete."
