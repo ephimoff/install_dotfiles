@@ -13,4 +13,6 @@ addons:
     - shellcheck
 
 script:
-  - ./test.sh
+  - ./1_lint_files.sh
+  - ./2_apply_dotfiles.sh
+  - ./3_test_dotfiles.sh
