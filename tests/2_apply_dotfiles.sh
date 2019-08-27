@@ -6,6 +6,7 @@ IFS=$'\n'
 
 # run dotfiles
 echo "Current dir is $(pwd)"
-echo "The content of this dir is:"
-ls -la
-"$(dirname "$(pwd)")/bootstrap.sh"
+# echo "The content of this dir is:"
+# ls -la
+"./bootstrap.sh"
+# "$(dirname "$(pwd)")/bootstrap.sh"
