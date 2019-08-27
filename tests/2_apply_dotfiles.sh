@@ -5,4 +5,4 @@ set -o pipefail
 IFS=$'\n'
 
 # run dotfiles
-../bootstrap.sh
+"$(dirname "$(pwd)")"/bootstrap.sh
