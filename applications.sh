@@ -2,8 +2,8 @@
 # Start
 echo "Starting $(basename "$0")"
 
-directory=~/Projects/dotfiles/preferences
-files=$(find $directory -iname ".*" -maxdepth 1 -type f)
+directory="${HOME}/Projects/install_dotfiles/preferences"
+files=$(find "$directory" -iname ".*" -maxdepth 1 -type f)
 
 # shellcheck disable=SC2068
 for file in ${files[@]} ; do

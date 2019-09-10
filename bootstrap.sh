@@ -7,12 +7,11 @@ directory="${HOME}/Projects/install_dotfiles"
 
 "$directory/clone_dotfiles.sh"
 "$directory/directories.sh"
-"$directory/templates.sh"
 "$directory/macos.sh"
 "$directory/brew.sh"
 "$directory/oh_my_zsh.sh"
 "$directory/dotfiles.sh"
-"$directory/preferences.sh"
+"$directory/applications.sh"
 
 # Finished
 echo "$(basename "$0") complete."
