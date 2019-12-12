@@ -4,7 +4,7 @@
 # Karabiner Elements.app
 ###############################################################################
 
-karabinerSource=$HOME/Projects/dotfiles-min/applications/karabiner/karabiner/
+karabinerSource=$HOME/Projects/dotfiles/applications/karabiner/karabiner/
 
 karabinerTarget=$HOME/.config/
 

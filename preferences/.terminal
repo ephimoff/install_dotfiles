@@ -5,7 +5,7 @@
 ###############################################################################
 
 echo "Terminal: Open Light theme"
-open "${HOME}/Projects/dotfiles-min/applications/terminal/Snazzy.terminal"
+open "${HOME}/Projects/dotfiles/applications/terminal/Snazzy.terminal"
 
 echo "Terminal: Make Snazzy theme the default one"
 defaults write com.apple.Terminal 'Default Window Settings' -string Snazzy

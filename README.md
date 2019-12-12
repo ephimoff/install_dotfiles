@@ -17,7 +17,7 @@ A collection of scripts that installs dotfiles from [this repo](https://github.c
 1. Install homebrew by running the following command:
 
     ```
-    ~/Projects/install_dotfiles/.brew_install
+    ~/Projects/install_dotfiles/brew_install.sh
     ```
 
 1. Run the following command to do everything.  _Note: you will be prompted for your password a number of times during script execution._
