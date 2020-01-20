@@ -9,9 +9,9 @@ directory="${HOME}/Projects/install_dotfiles"
 "$directory/directories.sh"
 "$directory/macos.sh"
 "$directory/brew.sh"
-"$directory/oh_my_zsh.sh"
 "$directory/dotfiles.sh"
 "$directory/applications.sh"
+"$directory/oh_my_zsh.sh"
 
 # Finished
 echo "$(basename "$0") complete."
