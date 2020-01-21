@@ -11,7 +11,7 @@ A collection of scripts that installs dotfiles from [this repo](https://github.c
 
     ```
     mkdir ~/Projects
-    git clone https://github.com/ephimoff/install_dotfiles.git ~/Projects/install_dotfiles
+    git clone git@github.com:ephimoff/install_dotfiles.git ~/Projects/install_dotfiles
     ```
 
 1. Install homebrew by running the following command:
