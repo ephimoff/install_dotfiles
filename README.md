@@ -6,7 +6,7 @@ A collection of scripts that installs dotfiles from [this repo](https://github.c
 
 ## Installation
 
-1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools.
+1. Make sure you have GIT installed. Hint: it comes with the xcode command line tools `xcode-select --install`.
 1. Clone this repository by echo the following commands:
 
     ```
