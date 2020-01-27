@@ -6,7 +6,7 @@
 
 karabinerSource=$HOME/Projects/dotfiles/applications/karabiner/karabiner/
 
-karabinerTarget=$HOME/.config/
+karabinerTarget=$HOME/.config/karabiner
 
 echo "Karabiner: Linking config file"
 if [[ -f "$karabinerSource" ]] ; then
