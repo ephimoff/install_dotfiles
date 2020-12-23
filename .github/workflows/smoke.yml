@@ -8,16 +8,15 @@ jobs:
 
     steps:
       - name: Create Projects folder
-        shell: bash
-        run: mkdir "Projects"
+      - run: mkdir "Projects"
 
       - name: Checkout the dotfiles repo
       - uses: actions/checkout@v2
-        run: ./clone_dotfiles.sh
+      - run: ./clone_dotfiles.sh
 
       - name: Install Homebrew
       - uses: actions/checkout@master
-        run: ./brew_install.sh
+      - run: ./brew_install.sh
 
       - name: Checkout the repo
       - uses: actions/checkout@v2
