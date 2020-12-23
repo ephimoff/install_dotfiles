@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: Create Projects folder
         shell: bash
-        run: |
-          mkdir "Projects"
+        run: mkdir "Projects"
 
       - name: Checkout the dotfiles repo
       - uses: actions/checkout@v2
