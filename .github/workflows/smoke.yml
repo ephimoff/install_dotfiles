@@ -7,6 +7,19 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Execute full install
-        run: ./install.sh
+      - name: Create Projects folder
+        shell: bash
+        run: |
+          mkdir "Projects"
+
+      - name: Checkout the dotfiles repo
+      - uses: actions/checkout@v2
+        run: ./clone_dotfiles.sh
+
+      - name: Install Homebrew
+      - uses: actions/checkout@master
+        run: ./brew_install.sh
+
+      - name: Checkout the repo
+      - uses: actions/checkout@v2
+        # run: ./install.sh

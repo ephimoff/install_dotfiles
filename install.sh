@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # mkdir "Projects"
-mkdir "${HOME}/Projects"
+# mkdir "${HOME}/Projects"
 
-./brew_install.sh
+# ./brew_install.sh
 ./clone_dotfiles.sh
 ./directories.sh
 ./macos.sh
